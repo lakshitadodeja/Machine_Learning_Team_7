@@ -23,7 +23,7 @@ Due to resource constraints and limitations especially in underrepresented commu
 3. 	GRU  (To be completed)
 4. 	If necessary, we may augment the training data through paraphrasing software such as Pegasus. 
 
-**Unsupervised Learning Methods**
+**Unsupervised Learning Methods**.  
 This will be employed to identify patterns in the data and attribute labels a posteriori, to account for datasets without labels to guide the training process. We will perform :  
 
 1.	K-means on vector space based term frequency of one-hot encodings as well as BERT encodings. 
