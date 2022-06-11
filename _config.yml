@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
 title: Predicting Effective Arguments
-description: Machine Learning Project Group 7 
+heading: Predicting Effective Arguments
+description: Machine Learning Project Group 7
+theme: jekyll-theme-cayman
