@@ -28,8 +28,8 @@ This will be employed to identify patterns in the data and attribute labels a po
     1. One-Hot encodings 
     2. 	BERT encodings. 
 2.	We also compare the effect of dimensionality reduction techniques before clustering through k-Means algorithm to understand the effect of word embeddings on the essay rating predictions, using :
-   	1. PCA<sup>[10]</sup>
-   	2. 	T-SNE<sup>[11]</sup>
+    1. PCA<sup>[10]</sup>
+    2. T-SNE<sup>[11]</sup>
 
 
 ### Potential Results and Discussion
