@@ -109,6 +109,11 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 **Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.**
 
+**Note:**
+1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
+2. Recall: TP/(TP+FN) - indicates the fraction of all positive samples were correctly predicted as positive by the classifier.
+3. f1_score: 2*(Precision.Recall)/(Precision + Recall) -is the harmonic mean of Precision and Recall. Research has shown that the F1 score is a better performance metrics than accuracy score for highly imbalanced datasets. 
+
 
 ### Gantt Chart 
 
