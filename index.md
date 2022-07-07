@@ -46,6 +46,7 @@ As expected, overall performance improvement <sup>[12]</sup> is achieved in the 
 | ------------- | :-------: | :-------: | 
 | MTL           | 0.62      | 0.68      | 
 | STL           | 0.58      | 0.65      | 
+
 **Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
 For the balanced data set, the performance scores were mostly consistent for both multi-task and single task. Noticeable performance variations were in the adequate and ineffective labels where the MTL performed better for recall and F1 scores except the precision scores of the adequate label where the STL showed better performance. 
@@ -60,7 +61,7 @@ Summary of performance is shown in the table below;
 | Effective     | 0.71      | 0.08     | 0.15      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 
 | Ineffective   | 0.72      | 0.58     | 0.64      |   
-| **Macro avg. **   | 0.70      | 0.52     | 0.52      | 
+| Macro avg.  | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
 ### *MTL Balanced dataset*
@@ -69,7 +70,7 @@ Summary of performance is shown in the table below;
 | Effective     | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.68      | 0.68      |0.68      | 
 | Ineffective   | 0.70      | 0.57      |0.63      | 
-| **Macro avg. **   | 0.59      |0.58       |0.58      |
+| Macro avg.    | 0.59      |0.58       |0.58      |
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
 
 
@@ -80,8 +81,7 @@ Summary of performance is shown in the table below;
 | Effective     | 0.46      | 0.36     | 0.33      | 
 | Adequate      | 0.66      | 0.83     | 0.74      | 
 | Ineffective   | 0.72      | 0.53     | 0.61      | 
-| Accuracy      |           |          | **0.65**  |   
-| **Macro avg.**    | 0.61      | 0.54     | 0.56      | 
+| Macro avg.    | 0.61      | 0.54     | 0.56      | 
 | Weighted  avg.| 0.64      | 0.65     | 0.63      | 
 
 ### *STL balanced data set *
@@ -91,10 +91,10 @@ Summary of performance is shown in the table below;
 | Effective     | 0.38      | 0.52     | 0.44      | 
 | Adequate      | 0.73      | 0.50     | 0.60      | 
 | Ineffective   | 0.55      | 0.79     | 0.65      | 
-| **Macro avg. **   | 0.55      | 0.61     | 0.56      | 
+| Macro avg.  | 0.55      | 0.61     | 0.56      | 
 | Weighted  avg.| 0.62      | 0.58     | 0.58      | 
 
-
+**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.**
 
 ### Gantt Chart 
 
