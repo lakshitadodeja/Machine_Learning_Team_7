@@ -36,6 +36,24 @@ This will be employed to identify patterns in the data and attribute labels a po
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
 We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
+### Supervised learning metrics discussion 
+As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. \
+In the multi-class classification for the three class arguments – Effective, adequate and ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. \
+
+As expected, overall performance improvement <sup>[12]</sup> is achieved in the MTL model compared to the STL model over both balanced and imbalanced data set. \
+
+For the balanced data set, the performance scores were mostly consistent for both multi-task and single task. Noticeable performance variations were in the adequate and ineffective labels where the MTL performed better for recall and F1 scores except the precision scores of the adequate label where the STL showed better performance. \
+
+Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. \
+Summary of performance is shown in the table below;\
+
+
+| Labels        | Precision     |  Recall     | f1-score        | Labels        | Precision     |  Recall     | f1-score        |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
 ### Gantt Chart 
 
 The Gantt chart for our project can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/sjain443_gatech_edu/EVY1kVoq6ixHlA6FHNfmD4wBotXA6n20QsYxsModKdRhPA?e=2YC7zb&isSPOFile=1)
@@ -52,8 +70,8 @@ The Gantt chart for our project can be found [here](https://gtvault-my.sharepoin
 [8]	Zhang, Jingqing, et al. "Pegasus: Pre-training with extracted gap-sentences for abstractive summarization." International Conference on Machine Learning. PMLR, 2020.\
 [9]	Forgy, Edward W. "Cluster analysis of multivariate data: efficiency versus interpretability of classifications." biometrics 21 (1965): 768-769.\
 [10]	Pearson, Karl. "LIII. On lines and planes of closest fit to systems of points in space." The London, Edinburgh, and Dublin philosophical magazine and journal of science 2.11 (1901): 559-572.\
-[11]	Van Der Maaten, Laurens. "Accelerating t-SNE using tree-based algorithms." The journal of machine learning research 15.1 (2014): 3221-3245.
-[12] Y. Zhang and Q. Yang, “A Survey on Multi-Task Learning,” arXiv [cs.LG], 2017. 
+[11]	Van Der Maaten, Laurens. "Accelerating t-SNE using tree-based algorithms." The journal of machine learning research 15.1 (2014): 3221-3245.\
+[12] Y. Zhang and Q. Yang, “A Survey on Multi-Task Learning,” arXiv [cs.LG], 2017. \
 
 
 
