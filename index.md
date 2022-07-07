@@ -49,14 +49,15 @@ Summary of performance is shown in the table below;
 
 ### *MTL*
 |               |Imbalanced                        |Balanced                          |
-| Labels        | Precision | Recall   | f1-score  | Precision | Recall    | f1-score |  
+| ------------- | :---------------------:          | :---------------------:          | 
+| Labels        | Precision | Recall   | F1-score  | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------:| :-------: | :-------: | :-------: | :-------:| 
 | Effective     | 0.71      | 0.08     | 0.15      | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 0.68      | 0.68      |0.68      | 
 | Ineffective   | 0.72      | 0.58     | 0.64      | 0.70      | 0.57      |0.63      | 
 | Accuracy      |           |          | **0.68**  |           |           |**0.62**  | 
 | Macro avg.    | 0.70      | 0.52     | 0.52      | 0.59      |0.58       |0.58      |
-|Weighted  avg. | 0.69      | 0.68     | 0.63      | 0.64      | 0.62      |0.62      | 
+| Weighted  avg.| 0.69      | 0.68     | 0.63      | 0.64      | 0.62      |0.62      | 
 
 
 
