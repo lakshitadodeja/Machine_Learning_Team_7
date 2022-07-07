@@ -36,7 +36,7 @@ This will be employed to identify patterns in the data and attribute labels a po
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
 We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
-**Supervised learning metrics discussion **
+**1. Supervised learning metrics discussion**
 
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
 In the multi-class classification for the three class arguments – Effective, adequate and ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. 
