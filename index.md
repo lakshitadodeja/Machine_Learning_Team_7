@@ -47,15 +47,17 @@ For the balanced data set, the performance scores were mostly consistent for bot
 Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. 
 Summary of performance is shown in the table below;
 
+### *MTL*
 
-| First Header  | Precision     | Precision     | Recall        | f1-score      | Precision     | Recall        | f1-score    | 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------| ------------- |
-| Content Cell  | 0.71          | Content Cell  | Content Cell  | Content Cell  | Content Cell  |Content Cell  | Content Cell  |
-| Content Cell  | 0.67          | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
-| Content Cell  | 0.72          | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
-| Content Cell  |               | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
-| Content Cell  | 0.70          | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
-| Content Cell  | 0.69          | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+| First Header  | Precision     | Precision     | Recall        | f1-score      | Precision     | Recall       | f1-score      |  
+| ------------- | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------:| :-----------: |
+| Effective     | 0.71          | 0.08 | Content Cell  | Content Cell  | Content Cell  |Content Cell  | Content Cell  |
+| Adequate      | 0.67          | 0.90 | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+| Ineffective   | 0.72          | 0.58 | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+| Content Cell  |               |      | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+| Accuracy      |               |      | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+| Macro avg.    | 0.70          | 0.52 | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
+|Weighted  avg. | 0.69          |0.68  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
 
 ### Gantt Chart 
 
