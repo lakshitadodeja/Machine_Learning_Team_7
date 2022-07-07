@@ -36,7 +36,8 @@ This will be employed to identify patterns in the data and attribute labels a po
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
 We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
-### Supervised learning metrics discussion 
+**Supervised learning metrics discussion **
+
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
 In the multi-class classification for the three class arguments – Effective, adequate and ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. 
 
@@ -51,10 +52,10 @@ As expected, overall performance improvement <sup>[12]</sup> is achieved in the 
 
 For the balanced data set, the performance scores were mostly consistent for both multi-task and single task. Noticeable performance variations were in the adequate and ineffective labels where the MTL performed better for recall and F1 scores except the precision scores of the adequate label where the STL showed better performance. 
 
-Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. 
-Summary of performance is shown in the table below;
+Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 
-### *MTL Imbalanced data set *
+
+**MTL Imbalanced data set **
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -64,7 +65,7 @@ Summary of performance is shown in the table below;
 | Macro avg.  | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
-### *MTL Balanced dataset*
+**MTL Balanced dataset**
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.39      | 0.50      |0.44      | 
@@ -74,7 +75,7 @@ Summary of performance is shown in the table below;
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
 
 
-### *STL Imbalanced data set *
+**STL Imbalanced data set **
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -84,7 +85,7 @@ Summary of performance is shown in the table below;
 | Macro avg.    | 0.61      | 0.54     | 0.56      | 
 | Weighted  avg.| 0.64      | 0.65     | 0.63      | 
 
-### *STL balanced data set *
+**STL balanced data set **
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -95,6 +96,7 @@ Summary of performance is shown in the table below;
 | Weighted  avg.| 0.62      | 0.58     | 0.58      | 
 
 **Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.**
+
 
 ### Gantt Chart 
 
