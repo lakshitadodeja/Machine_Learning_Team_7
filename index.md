@@ -24,9 +24,9 @@ For BERT and T5, we will perform both multitask and single-task learning.
 **Unsupervised Learning Methods**
 
 This will be employed to identify patterns in the data and attribute labels a posteriori, to account for datasets without labels to guide the training process.
-1.	We will perform K-means clustering<sup>[9]</sup> on vector space based on
-    1. One-Hot encodings 
-    2. 	BERT encodings. 
+\item	We will perform K-means clustering<sup>[9]</sup> on vector space based on
+    1. One-Hot encodings: For this analysis, we use Tf-idf (Term frequency - inverse document frequency) representation for entry essay snippet. Considering each word in the dataset to be a dimension results in around 29k features for each data point. However, this large dimensional space includes due to mispellings and various forms of the same word, thus leading to redundant features. To reduce these reduntant features, the vocabulary (consequently the dimesions of the dataset) is limited only the words that are present in at least two different essays. Further, these words are lemmatized to their root word. Through these steps, the vector-space of the data was reduced to 7795 dimensions.
+    2. BERT encodings. 
 2.	We also compare the effect of dimensionality reduction techniques before clustering through k-Means algorithm to understand the effect of word embeddings on the essay rating predictions, using :
     1. PCA<sup>[10]</sup>
     2. T-SNE<sup>[11]</sup>
