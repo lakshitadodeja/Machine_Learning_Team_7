@@ -31,6 +31,18 @@ This will be employed to identify patterns in the data and attribute labels a po
     1. PCA<sup>[10]</sup>
     2. T-SNE<sup>[11]</sup>
 
+### Data Collection 
+Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k argumentative essays written by U.S students in grades 6-12 and contains features corresponding to the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective. 
+
+
+
+
+
+
+
+
+
+
 
 ### Potential Results and Discussion
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
@@ -71,7 +83,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Effective     | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.68      | 0.68      |0.68      | 
 | Ineffective   | 0.70      | 0.57      |0.63      | 
-| Macro avg.    | 0.59      |0.58       |0.58      |
+| Macro avg.    | 0.59      | 0.58      |0.58      |
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
 
 
