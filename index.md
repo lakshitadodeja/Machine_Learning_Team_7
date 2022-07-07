@@ -48,10 +48,10 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 Summary of performance is shown in the table below;
 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| First Header  | Second Header | First Header  | Second Header | First Header  | Second Header| First Header  | Second Header |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | -------------| ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |Content Cell   | Content Cell  |Content Cell  | Content Cell  |
 
 
 ### Gantt Chart 
