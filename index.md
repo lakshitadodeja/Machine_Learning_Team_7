@@ -55,7 +55,7 @@ For the balanced data set, the performance scores were mostly consistent for bot
 Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 
 
-**MTL Imbalanced data set **
+**MTL Imbalanced data set**
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -75,7 +75,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
 
 
-**STL Imbalanced data set **
+**STL Imbalanced data set**
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -85,7 +85,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Macro avg.    | 0.61      | 0.54     | 0.56      | 
 | Weighted  avg.| 0.64      | 0.65     | 0.63      | 
 
-**STL balanced data set **
+**STL balanced data set**
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
