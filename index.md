@@ -70,8 +70,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <table>
 <tr><th>MTL Imbalanced dataset </th><th>MTL Balanced dataset</th></tr>
 <tr><td>
-
-
+    
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.71      | 0.08     | 0.15      | 
@@ -80,9 +79,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Macro avg.    | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
-
 </td><td>
-
 
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
@@ -91,8 +88,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Ineffective   | 0.70      | 0.57      |0.63      | 
 | Macro avg.    | 0.59      | 0.58      |0.58      |
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
-
-
+    
 </td></tr> </table>
 
 <table>
@@ -119,7 +115,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
     
 </td></tr> </table>
 
-**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.c1**
+**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.**
 
 **Note:**
 1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
@@ -133,27 +129,28 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 * PCA
 
 * t-SNE
-Imbalanced dataset for three Clusters</th><th>MTL Balanced dataset</th></tr>
+<table>
+<tr><th>Imbalanced dataset for three Clusters</th><th>MTL Balanced dataset</th></tr>
 <tr><td>
 
     
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.71      | 0.08     | 0.15      | 
-| Adequate      | 0.67      | 0.90     | 0.77      | 
-| Ineffective   | 0.72      | 0.58     | 0.64      |   
-| Macro avg.    | 0.70      | 0.52     | 0.52      | 
-| Weighted  avg.| 0.69      | 0.68     | 0.63      | 
+| Effective     | 0.00      | 0.00     | 0.00      | 
+| Adequate      | 0.58      | 1.00     | 0.73      | 
+| Ineffective   | 0.00      | 0.00     | 0.00      |   
+| Macro avg.    | 0.19      | 0.33     | 0.24      | 
+| Weighted  avg.| 0.33      | 0.58     | 0.42      | 
 
 </td><td>
 
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
-| Effective     | 0.39      | 0.50      |0.44      | 
-| Adequate      | 0.68      | 0.68      |0.68      | 
-| Ineffective   | 0.70      | 0.57      |0.63      | 
-| Macro avg.    | 0.59      | 0.58      |0.58      |
-| Weighted  avg.| 0.64      | 0.62      |0.62      | 
+| Effective     | 0.29      | 0.38      | 0.33     | 
+| Adequate      | 0.60      | 0.38      | 0.46     | 
+| Ineffective   | 0.24      | 0.42      | 0.30     | 
+| Macro avg.    | 0.38      | 0.39      | 0.37     |
+| Weighted  avg.| 0.46      | 0.39      | 0.40     | 
     
 </td></tr> </table>
 
@@ -163,21 +160,21 @@ Imbalanced dataset for three Clusters</th><th>MTL Balanced dataset</th></tr>
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.46      | 0.36     | 0.33      | 
-| Adequate      | 0.66      | 0.83     | 0.74      | 
-| Ineffective   | 0.72      | 0.53     | 0.61      | 
-| Macro avg.    | 0.61      | 0.54     | 0.56      | 
-| Weighted  avg.| 0.64      | 0.65     | 0.63      | 
+| Effective     | 0.30      | 0.54     | 0.38      | 
+| Adequate      | 0.62      | 0.28     | 0.39      | 
+| Ineffective   | 0.27      | 0.44     | 0.33      | 
+| Macro avg.    | 0.40      | 0.42     | 0.37      | 
+| Weighted  avg.| 0.48      | 0.37     | 0.38      | 
 
 </td><td>
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.38      | 0.52     | 0.44      | 
-| Adequate      | 0.73      | 0.50     | 0.60      | 
-| Ineffective   | 0.55      | 0.79     | 0.65      | 
-| Macro avg.    | 0.55      | 0.61     | 0.56      | 
-| Weighted  avg.| 0.62      | 0.58     | 0.58      | 
+| Effective     | 0.46      | 0.58     | 0.51      | 
+| Adequate      | 0.48      | 0.41     | 0.44      | 
+| Ineffective   | 0.51      | 0.44     | 0.47      | 
+| Macro avg.    | 0.48      | 0.48     | 0.47      | 
+| Weighted  avg.| 0.48      | 0.48     | 0.47      | 
     
 </td></tr> </table>
 
