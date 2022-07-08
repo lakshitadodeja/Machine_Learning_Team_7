@@ -113,7 +113,11 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 **2. Unsupervised learning: results and discussion**
 
-We use the same metrics (precision, rcall, F1, accuracy) used to evaluate supervised learning. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
+We use the same metrics (precision, rcall, F1, accuracy) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
+
+* PCA
+
+* t-SNE
 
 ### Gantt Chart 
 
