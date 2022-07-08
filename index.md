@@ -129,6 +129,55 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 * PCA
 
 * t-SNE
+Imbalanced dataset for three Clusters</th><th>MTL Balanced dataset</th></tr>
+<tr><td>
+
+    
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Effective     | 0.71      | 0.08     | 0.15      | 
+| Adequate      | 0.67      | 0.90     | 0.77      | 
+| Ineffective   | 0.72      | 0.58     | 0.64      |   
+| Macro avg.    | 0.70      | 0.52     | 0.52      | 
+| Weighted  avg.| 0.69      | 0.68     | 0.63      | 
+
+</td><td>
+
+|Labels         | Precision | Recall    | F1-score |  
+| ------------- | :-------: | :-------: | :-------:| 
+| Effective     | 0.39      | 0.50      |0.44      | 
+| Adequate      | 0.68      | 0.68      |0.68      | 
+| Ineffective   | 0.70      | 0.57      |0.63      | 
+| Macro avg.    | 0.59      | 0.58      |0.58      |
+| Weighted  avg.| 0.64      | 0.62      |0.62      | 
+    
+</td></tr> </table>
+
+<table>
+<tr><th>Balanced dataset for 10 Clusters</th><th>STL Balanced dataset for 25 Clusters</th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Effective     | 0.46      | 0.36     | 0.33      | 
+| Adequate      | 0.66      | 0.83     | 0.74      | 
+| Ineffective   | 0.72      | 0.53     | 0.61      | 
+| Macro avg.    | 0.61      | 0.54     | 0.56      | 
+| Weighted  avg.| 0.64      | 0.65     | 0.63      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Effective     | 0.38      | 0.52     | 0.44      | 
+| Adequate      | 0.73      | 0.50     | 0.60      | 
+| Ineffective   | 0.55      | 0.79     | 0.65      | 
+| Macro avg.    | 0.55      | 0.61     | 0.56      | 
+| Weighted  avg.| 0.62      | 0.58     | 0.58      | 
+    
+</td></tr> </table>
+
+**Table 4(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
 
 ### Gantt Chart 
 
