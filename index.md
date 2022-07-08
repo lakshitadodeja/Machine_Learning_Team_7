@@ -70,8 +70,8 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <table>
 <tr><th>MTL Imbalanced dataset </th><th>MTL Balanced dataset</th></tr>
 <tr><td>
-    
-    
+
+
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.71      | 0.08     | 0.15      | 
@@ -79,11 +79,11 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Ineffective   | 0.72      | 0.58     | 0.64      |   
 | Macro avg.    | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
-    
-    
+
+
 </td><td>
-    
-    
+
+
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.39      | 0.50      |0.44      | 
@@ -91,8 +91,8 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Ineffective   | 0.70      | 0.57      |0.63      | 
 | Macro avg.    | 0.59      | 0.58      |0.58      |
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
-    
-    
+
+
 </td></tr> </table>
 
 <table>
@@ -119,7 +119,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
     
 </td></tr> </table>
 
-**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.**
+**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and unbalanced data sets.c1**
 
 **Note:**
 1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
