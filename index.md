@@ -23,13 +23,15 @@ For BERT and T5, we will perform both multitask and single-task learning.
 
 **Unsupervised Learning Methods**
 
-This will be employed to identify patterns in the data and attribute labels a posteriori, to account for datasets without labels to guide the training process.
-* We will perform K-means clustering<sup>[9]</sup> on vector space based on
-    1. One-Hot encodings: For this analysis, we use Tf-idf (Term frequency - inverse document frequency) representation for entry essay snippet. Considering each word in the dataset to be a dimension results in around 29k features for each data point. However, this large dimensional space includes due to mispellings and various forms of the same word, thus leading to redundant features. To reduce these reduntant features, the vocabulary (consequently the dimesions of the dataset) is limited only the words that are present in at least two different essays. Further, these words are lemmatized to their root word. Through these steps, the vector-space of the data was reduced to 7795 dimensions.
-    2. BERT encodings. 
-* We also compare the effect of dimensionality reduction techniques before clustering through k-Means algorithm to understand the effect of word embeddings on the essay rating predictions, using :
-    1. PCA<sup>[10]</sup>
-    2. T-SNE<sup>[11]</sup>
+This will be employed to identify patterns in the data and attribute labels a posteriori, to account for datasets without labels to guide the training process. This will be accomplished through One-hot encoding and BERT encodings.
+
+* One-Hot encodings: For this analysis, we use Tf-idf (Term frequency - inverse document frequency) representation for entry essay snippet. Considering each word in the dataset to be a dimension results in around 29k features for each data point. However, this large dimensional space includes due to mispellings and various forms of the same word, thus leading to redundant features. To reduce these reduntant features, the vocabulary (consequently the dimesions of the dataset) is limited only the words that are present in at least two different essays. Further, these words are lemmatized to their root word. Through these steps, the vector-space of the data is limited to 7795 dimensions. This vector-space is further reduced through dimensionality through PCA<sup>[10]</sup> and t-SNE<sup>[11]</sup> to select the dominant features of the dataset. Clustering in then performed in this reduced dimensional space using k-Means clustering <sup>[9]</sup> and Gaussian Mixture models (GMM).
+
+* BERT encodings: Despite many dimensinality reductions and feature enginnering, one-hot encoding treats each word indivudually and cannot capture the semantic representation of the text. Therefore, BERT encoding are used to address this deficiency of one-hot encodings. Similar to the analysis using one-hot vectors, we extract dominant features using PCA and t-SNE, and reduce the dimensionility of the data. Then, clustering is performed using k-Means and GMM.
+
+[//]: <> We also compare the effect of dimensionality reduction techniques before clustering through k-Means algorithm to understand the effect of word embeddings on the essay rating predictions, using :
+[//]: <>    1. PCA<sup>[10]</sup>
+[//]: <>    2. T-SNE<sup>[11]</sup>
 
 ### Data Collection 
 Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k argumentative essays written by U.S students in grades 6-12 and contains features corresponding to the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective. 
