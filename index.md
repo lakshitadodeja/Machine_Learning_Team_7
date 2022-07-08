@@ -135,8 +135,67 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
 
 We use the same metrics (precision, recall, and F1) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
 
-* PCA
+* **PCA**
 
+In order to obtain usable feature vectors as input to unsupervised clustering methods (e.g. KMeans), the One-Hot encoded vectors were reduced by many magnitudes using PCA. A variance of at least 50% was retained by the reduced feature vectors. Multiple feature vector lengths were tested on the KMeans clustering algorithm to find the optimal model.
+
+Using KMeans, we were able to achieve an accuracy rate of around 44% with the data that was provided by the Kaggle challenge. As mentioned in the Data Collection section, we observed the dataset to be biased towards one label value (Adequate), which caused the model to assign most clusters to this value. To counter this bias, we balanced the data by oversampling the data, creating multiple samples of the other label values, and reducing the dominating label (Adequate). This in turn increased the accuracy of the model to 44% on the validation set. In addition, rather than creating just three clusters, and mapping each cluster of KMeans to a label value, we generated multiple clusters, and assigned each cluster to a label value. This decreases the chances of grouping too many datapoints and assigning a big chunk of it to one label, thus increasing the likelihood of assigning smaller groups of datapoints to the correct label. This method of clustering proved ineffective for the unbalanced data as most clusters were assigned to the dominating label, but worked fine with the balanced data set. The model was tested using a validation dataset which was extracted from the original dataset. The dataset was split 20-80 across the validation and training datasets. The table below shows the metrics achieved using the mehtods described above.
+
+<table>
+<tr><th> Training Metrics for 75 features with 15 clusters</th><th> Validation Metrics for 75 features with 15 clusters
+<tr><td>
+
+    
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Adequate      | 0.40      | 0.56     | 0.46      | 
+| Ineffective   | 0.52      | 0.46     | 0.49      | 
+| Effective     | 0.51      | 0.36     | 0.42      |   
+| Macro avg.    | 0.47      | 0.46     | 0.46      | 
+| Weighted  avg.| 0.47      | 0.46     | 0.46      | 
+    
+</td><td>
+
+|Labels         | Precision | Recall    | F1-score |  
+| ------------- | :-------: | :-------: | :-------:| 
+| Adequate      | 0.63      | 0.55      | 0.59     | 
+| Ineffective   | 0.30      | 0.46      | 0.36     | 
+| Effective     | 0.38      | 0.36      | 0.37     | 
+| Macro avg.    | 0.44      | 0.45      | 0.44     |
+| Weighted  avg.| 0.51      | 0.48      | 0.49     | 
+    
+</td></tr> </table>
+    
+**Table 4: Summary of precision, recall and F1-scores for KMeans using PCA reduced feature vectors of balanced data set.**
+    
+Alternatively, we attempted to execute the KMeans algorithm with 3 clusters (the amount of label values), and forcefully assigned each cluster to one of the three label values. However, this proved ineffective as the model struggled to achieve 40% accuracy. In addition, it seems dimensionality reduction doesn’t affect the assignment of data points to the three clusters. We tested reducing the feature vector to various number of features (75, 100, 200, etc.), and found that clustering was not affected. The accuracy remained 39% as shown in the table below.
+
+<table>
+<tr><th> Training Metrics for any number of features with 3 clusters</th><th> Validation Metrics for any number of features with 3 clusters
+<tr><td>
+
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Adequate      | 0.38      | 0.37     | 0.38      | 
+| Ineffective   | 0.45      | 0.48     | 0.46      | 
+| Effective     | 0.39      | 0.37     | 0.38      |   
+| Macro avg.    | 0.41      | 0.41     | 0.41      | 
+| Weighted  avg.| 0.41      | 0.41     | 0.41      | 
+    
+</td><td>
+
+|Labels         | Precision | Recall    | F1-score |  
+| ------------- | :-------: | :-------: | :-------:| 
+| Adequate      | 0.63      | 0.38      | 0.47     | 
+| Ineffective   | 0.26      | 0.50      | 0.34     | 
+| Effective     | 0.27      | 0.36      | 0.31     | 
+| Macro avg.    | 0.39      | 0.41      | 0.47     |
+| Weighted  avg.| 0.48      | 0.39      | 0.41     | 
+    
+</td></tr> </table>
+
+**Table 5: Summary of metrics for any number of reduced features using PCA, and 3 clusters using balanced data set.**
+   
 * **t-SNE**
 
 We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 4-a and 4-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 4-c and 4-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
@@ -190,7 +249,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
     
 </td></tr> </table>
 
-**Table 4(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
+**Table 6(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
 
 In terms of accuracy, we see that imbalanced training has higher accuracy than that of balanced training, and it is for all choice of clusters (see Table 5). This is due to the fact that in imbalanced models, all the data points are classified as the majority class. This is seen from the F1-scroe of zero for "ineffective" and "effective" classes in Table 4. a. In effect, the model has not decipher/learned the difference between the classes, but instead it undefits the data to the majority class.
 
