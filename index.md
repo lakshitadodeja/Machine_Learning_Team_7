@@ -50,7 +50,7 @@ We will also qualitatively compare approaches using transcripts of court proceed
 **1. Supervised learning: Results and Discussion**
 
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
-In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. We have used BERT embeddings for Supervised Learning for now. We will also try to use T5 embeddings for our final report. 
+In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets.  
 
 For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
 
@@ -71,7 +71,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <tr><th>MTL Imbalanced dataset </th><th>MTL Balanced dataset</th></tr>
 <tr><td>
     
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.71      | 0.08     | 0.15      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 
@@ -81,7 +81,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 </td><td>
 
-|Labels         | Precision | Recall    | F1 |  
+|Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.68      | 0.68      |0.68      | 
@@ -95,7 +95,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <tr><th>STL Imbalanced dataset </th><th>STL Balanced dataset</th></tr>
 <tr><td>
               
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.46      | 0.36     | 0.33      | 
 | Adequate      | 0.66      | 0.83     | 0.74      | 
@@ -105,7 +105,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 </td><td>
               
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.38      | 0.52     | 0.44      | 
 | Adequate      | 0.73      | 0.50     | 0.60      | 
@@ -129,12 +129,16 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 * PCA
 
 * **t-SNE**
+
+We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15,25... It can be inferred from tables 4-a and 4-b, the noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The balanced data has significant performance improvement from 10 to 25 clusters, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
+
+
 <table>
 <tr><th>Imbalanced dataset for three Clusters</th><th>Balanced dataset for three clusters</th></tr>
 <tr><td>
 
     
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.00      | 0.00     | 0.00      | 
 | Adequate      | 0.58      | 1.00     | 0.73      | 
@@ -144,7 +148,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 </td><td>
 
-|Labels         | Precision | Recall    | F1 |  
+|Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.29      | 0.38      | 0.33     | 
 | Adequate      | 0.60      | 0.38      | 0.46     | 
@@ -158,7 +162,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 <tr><th>Balanced dataset for 10 Clusters</th><th> Balanced dataset for 25 Clusters</th></tr>
 <tr><td>
               
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.30      | 0.54     | 0.38      | 
 | Adequate      | 0.62      | 0.28     | 0.39      | 
@@ -168,7 +172,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 </td><td>
               
-|Labels         | Precision | Recall   | F1  | 
+|Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.46      | 0.58     | 0.51      | 
 | Adequate      | 0.48      | 0.41     | 0.44      | 
