@@ -134,7 +134,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
 
 
 <table>
-<tr><th>Imbalanced dataset for three Clusters</th><th>Balanced dataset for three clusters</th></tr>
+<tr><th>Imbalanced dataset for 3 Clusters</th><th>Balanced dataset for 3 clusters</th></tr>
 <tr><td>
 
     
