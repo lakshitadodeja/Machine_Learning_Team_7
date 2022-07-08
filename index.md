@@ -54,18 +54,18 @@ In the multi-class classification for the three class arguments – Effective, A
 
 For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
 
-As expected, overall performance improvement is achieved in the MTL model compared to the STL model over both balanced and imbalanced data set (Summary is shown in table 1 below). 
+As expected, overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 1 below). 
 
 |Learning model | Balanced  | Imbalanced| 
 | ------------- | :-------: | :-------: | 
-| MTL           | 0.62      | 0.68      | 
-| STL           | 0.58      | 0.65      | 
+| STL           | 0.62      | 0.68      | 
+| MTL           | 0.58      | 0.65      | 
 
 **Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
-For the balanced data set, the performance scores were mostly consistent for both multi-task and single task. Noticeable performance variations were in the adequate and ineffective labels where the MTL performed better for recall and F1 scores except the precision scores of the adequate label where the STL showed better performance. 
+For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels. Noticeable variation in the recall performance of MTL as it showed better performance for effective argument compared to STL.  
 
-Interestingly for the imbalanced data set, the recall and f1-score improved with STL compared to the MTL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
+For the imbalanced data set, the recall and f1-score improved with MTL compared to the STL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 
 <table>
 <tr><th>STL Imbalanced dataset </th><th>STL Balanced dataset</th></tr>
@@ -97,9 +97,9 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.46      | 0.36     | 0.33      | 
+| Effective     | 0.46      | 0.26     | 0.33      | 
 | Adequate      | 0.66      | 0.83     | 0.74      | 
-| Ineffective   | 0.72      | 0.53     | 0.61      | 
+| Ineffective   | 0.71      | 0.53     | 0.61      | 
 | Macro avg.    | 0.61      | 0.54     | 0.56      | 
 | Weighted  avg.| 0.64      | 0.65     | 0.63      | 
 
@@ -130,17 +130,8 @@ We use the same metrics (precision, recall, and F1) used to evaluate supervised 
 
 * **t-SNE**
 
-We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 5-a and 5-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 5-c and 5-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
- 
- The accuracy of the various combinations of data and number of clusters is given in table 4. It is to be noted that the accuracy for imbalanced dataset has only one cluster and does not classify and label the other clusters. This can be seen in table 5(a).
- 
- |No of Clusters | Balanced  | Imbalanced| 
- |-------------  | :-------: | :-------: | 
- | 3             | 0.40      | 0.58      | 
- | 15            | 0.38      | 0.58      |
- | 25            | 0.50      | 0.58      |
- 
-**Table 4: Summary of accuracy results for T-SNE dimension reduced data over balanced and imbalanced data sets.**
+We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 4-a and 4-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 4-c and 4-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
+
 
 <table>
 <tr><th> a. Imbalanced dataset for 3 Clusters</th><th> b. Balanced dataset for 3 clusters</th></tr>
@@ -191,7 +182,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
     
 </td></tr> </table>
 
-**Table 5(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
+**Table 4(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
 
 ### Gantt Chart 
 
