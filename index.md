@@ -130,7 +130,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 * t-SNE
 <table>
-<tr><th>Imbalanced dataset for three Clusters</th><th>MTL Balanced dataset</th></tr>
+<tr><th>Imbalanced dataset for three Clusters</th><th>Balanced dataset for three clusters</th></tr>
 <tr><td>
 
     
@@ -155,7 +155,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 </td></tr> </table>
 
 <table>
-<tr><th>Balanced dataset for 10 Clusters</th><th>STL Balanced dataset for 25 Clusters</th></tr>
+<tr><th>Balanced dataset for 10 Clusters</th><th> Balanced dataset for 25 Clusters</th></tr>
 <tr><td>
               
 |Labels         | Precision | Recall   | F1-score  | 
