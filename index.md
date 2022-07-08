@@ -124,7 +124,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 **2. Unsupervised learning: Results and Discussion**
 
-We use the same metrics (precision, rcall, F1, accuracy) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
+We use the same metrics (precision, recall, and F1) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
 
 * PCA
 
@@ -134,7 +134,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
 
 
 <table>
-<tr><th>Imbalanced dataset for 3 Clusters</th><th>Balanced dataset for 3 clusters</th></tr>
+<tr><th> a. Imbalanced dataset for 3 Clusters</th><th> b. Balanced dataset for 3 clusters</th></tr>
 <tr><td>
 
     
@@ -159,7 +159,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
 </td></tr> </table>
 
 <table>
-<tr><th>Balanced dataset for 10 Clusters</th><th> Balanced dataset for 25 Clusters</th></tr>
+<tr><th> c. Balanced dataset for 10 Clusters</th><th> d. Balanced dataset for 25 Clusters</th></tr>
 <tr><td>
               
 |Labels         | Precision | Recall   | F1-score  | 
