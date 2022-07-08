@@ -1,6 +1,7 @@
 title: Predicting Effective Arguments
 description: Machine Learning Project Group 7
 theme: jekyll-theme-cayman
+markdown: GFM 
 
 github:
   is_project_page: false
