@@ -63,9 +63,9 @@ As expected, overall performance improvement is achieved in the imbalanced data 
 
 **Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
-For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels. Noticeable variation in the recall performance of MTL as it showed better performance for effective argument compared to STL.  
+For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels. The recall scores of MTL showed better performance for effective argument compared to STL.  
 
-For the imbalanced data set, the recall and f1-score improved with MTL compared to the STL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
+For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 
 <table>
 <tr><th>STL Imbalanced dataset </th><th>STL Balanced dataset</th></tr>
