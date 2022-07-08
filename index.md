@@ -54,8 +54,12 @@ In the multi-class classification for the three class arguments – Effective, A
 
 For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
 
-As expected, overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 1 below). 
+As expected, STL achives higher accuracy than MTL, and accuracy for models trainined imbalanced data has higher accuracy than a model trained on balanced data. (Summary is shown in table 1 below). 
 
+However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (quantified via recall).
+<!---
+overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 1 below). 
+--->
 |Learning model | Balanced  | Imbalanced| 
 | ------------- | :-------: | :-------: | 
 | STL           | 0.62      | 0.68      | 
