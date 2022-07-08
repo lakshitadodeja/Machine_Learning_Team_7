@@ -56,7 +56,6 @@ For single task learning, we appeneded the discourse type with the discourse tex
 
 As expected, STL achives higher accuracy than MTL, and accuracy for models trainined imbalanced data has higher accuracy than a model trained on balanced data. (Summary is shown in table 1 below). 
 
-However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (quantified via recall).
 <!---
 overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 1 below). 
 --->
@@ -67,9 +66,7 @@ overall performance improvement is achieved in the imbalanced data for both MTL 
 
 **Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
-For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels where the MTL performed better for precision and recall scores respectively.
-
-For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL as expected, but performed lower for precision. (Report summary is shown in table 2(a-d)).
+However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (see recall in Table 2. a and 2. c in comparision to Table 2. b and Table 2. d respectively). Whereas, for the balanced data set, the performance scores were mostly consistent for both MTL and STL. Additionally, we see a distinction between STL and MTL models. In general, MTL models are more robust to imbalanced training. This is also reflected in the MTL model performance for imbalanced training - we see a more consistent performance across all labels ("adequate", "effective" and "ineffective) for MTL (Table 2. c) vis-a-vis STL performance (see Table 2.a). The performance metrics are summarized below in Table 2.
 
 <table>
 <tr><th> a. STL Imbalanced dataset </th><th> b. STL Balanced dataset</th></tr>
@@ -118,6 +115,14 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
 | Weighted  avg.| 0.62      | 0.58     | 0.58      | 
     
 </td></tr> </table>
+
+Overall, MTL and balanced training improved the robustness of the predictions across the classes and thus generalize the model better for all classes. As a trade-off, we loose some accuracy in both these approaches - MTL is seen to trade more accuracy than balanced training to improve robustness.
+
+<!---
+Although the overall accuracy was lower for MTL models, we see noticeable performance improvements in the adequate and effective labels where the MTL performed better for precision and recall scores respectively.
+
+For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL as expected, but performed lower for precision. (Report summary is shown in table 2(a-d)).
+--->
 
 **Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
 
