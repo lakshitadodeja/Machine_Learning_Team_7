@@ -139,6 +139,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
  | 3             | 0.40      | 0.58      | 
  | 15            | 0.38      | 0.58      |
  | 25            | 0.50      | 0.58      |
+ 
 **Table 4: Summary of accuracy results for T-SNE dimension reduced data over balanced and imbalanced data sets.**
 
 <table>
