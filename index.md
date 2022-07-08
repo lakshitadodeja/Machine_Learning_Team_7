@@ -141,16 +141,6 @@ We use the same metrics (precision, recall, and F1) used to evaluate supervised 
 
 We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 4-a and 4-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 4-c and 4-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
 
-The accuracy of the reduced data over various clusters is given in table 4. It is worth noting that the accuracy for imbalanced dataset has only one cluster and is not able to label the other two clusters. The accuracy remains same as the number of clusters increase. The accuracy for balanced data set dropped a little and increased tremendously as the number of clusters were increased.
-
-|Number of Clusters | Balanced  | Imbalanced| 
-| ----------------- | :-------: | :-------: | 
-| 3                 | 0.39      | 0.58      | 
-| 15                | 0.38      | 0.58      | 
-| 25                | 0.48      | 0.58      | 
-
-**Table 4: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
-
 <table>
 <tr><th> a. Imbalanced dataset for 3 Clusters</th><th> b. Balanced dataset for 3 clusters</th></tr>
 <tr><td>
@@ -200,7 +190,23 @@ The accuracy of the reduced data over various clusters is given in table 4. It i
     
 </td></tr> </table>
 
-**Table 5(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
+**Table 4(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
+
+In terms of accuracy, we see that imbalanced training has higher accuracy than that of balanced training, and it is for all choice of clusters (see Table 5). This is due to the fact that in imbalanced models, all the data points are classified as the majority class. This is seen from the F1-scroe of zero for "ineffective" and "effective" classes in Table 4. a. In effect, the model has not decipher/learned the difference between the classes, but instead it undefits the data to the majority class.
+
+We address this by balancing the training data through ramdom-oversampling. In this process, similar to supervised learning, we trade-off accuracy for robust/consistent performance across all classes. This explains the drop in accuracy for balanced models in Table 5.
+<!---
+The accuracy of the reduced data over various clusters is given in table 4. It is worth noting that the accuracy for imbalanced dataset has only one cluster and is not able to label the other two clusters. The accuracy remains same as the number of clusters increase. The accuracy for balanced data set dropped a little and increased tremendously as the number of clusters were increased.
+--->
+|Number of Clusters | Balanced  | Imbalanced| 
+| ----------------- | :-------: | :-------: | 
+| 3                 | 0.39      | 0.58      | 
+| 15                | 0.38      | 0.58      | 
+| 25                | 0.48      | 0.58      | 
+
+**Table 4: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
+
+To conclude, among the unsupervised learning models considered, the balanced learning model with 25 clusters (Table 4. d) is seen to provide the best mix of accuracy and generalization across classes. 
 
 ### Gantt Chart 
 
