@@ -116,6 +116,13 @@ However, this superior performance is limited to majority class. For minority cl
     
 </td></tr> </table>
 
+**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
+
+**Note:**
+1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
+2. Recall: TP/(TP+FN) - indicates the fraction of all positive samples were correctly predicted as positive by the classifier.
+3. f1_score: 2*(Precision.Recall)/(Precision + Recall) -is the harmonic mean of Precision and Recall. Research has shown that the F1 score is a better performance metrics than accuracy score for highly imbalanced datasets. 
+
 Overall, MTL and balanced training improved the robustness of the predictions across the classes and thus generalize the model better for all classes. As a trade-off, we loose some accuracy in both these approaches - MTL is seen to trade more accuracy than balanced training to improve robustness.
 
 <!---
@@ -123,13 +130,6 @@ Although the overall accuracy was lower for MTL models, we see noticeable perfor
 
 For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL as expected, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 --->
-
-**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
-
-**Note:**
-1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
-2. Recall: TP/(TP+FN) - indicates the fraction of all positive samples were correctly predicted as positive by the classifier.
-3. f1_score: 2*(Precision.Recall)/(Precision + Recall) -is the harmonic mean of Precision and Recall. Research has shown that the F1 score is a better performance metrics than accuracy score for highly imbalanced datasets. 
 
 **2. Unsupervised learning: Results and Discussion**
 
