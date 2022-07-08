@@ -38,7 +38,7 @@ We also compare the effect of dimensionality reduction techniques before cluster
 ### Data Collection 
 Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k argumentative essays written by U.S students in grades 6-12 and contains features corresponding to the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective. 
 
-
+Another important point to be noted is that the dataset in unbalanced. Of the 36k datapoints, more than 20k are rated "adequate", whereas only 6k "ineffective" and 9k "effective" arguments exist. Such imbalanced training could bias the final model. Therefore, this inbalance in training is countered either by randm oversampling (for unsupervised learning) and through weighing the loss function in supervised learrning. Results will be presented for balanced and unbalanced traning.
 
 ### Potential Results and Discussion
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
@@ -111,6 +111,8 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 3. f1_score: 2*(Precision.Recall)/(Precision + Recall) -is the harmonic mean of Precision and Recall. Research has shown that the F1 score is a better performance metrics than accuracy score for highly imbalanced datasets. 
 
 **2. Unsupervised learning: results and discussion**
+
+
 
 ### Gantt Chart 
 
