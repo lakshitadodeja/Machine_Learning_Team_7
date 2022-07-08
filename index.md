@@ -204,7 +204,7 @@ The accuracy of the reduced data over various clusters is given in table 4. It i
 | 15                | 0.38      | 0.58      | 
 | 25                | 0.48      | 0.58      | 
 
-**Table 4: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
+**Table 5: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
 
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 clusters (Table 4. d) is seen to provide the best mix of accuracy and generalization across classes. 
 
