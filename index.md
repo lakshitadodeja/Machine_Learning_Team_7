@@ -45,12 +45,16 @@ All approaches will be objectively compared through metrics such as accuracy, F1
 
 We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
+### Midterm Report Checkpoint 
+
 **1. Supervised learning metrics discussion**
 
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
-In the multi-class classification for the three class arguments – Effective, adequate and ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. 
+In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets.  
 
-As expected, overall performance improvement <sup>[12]</sup> is achieved in the MTL model compared to the STL model over both balanced and imbalanced data set (Summary is shown in table 1 below). 
+For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
+
+As expected, overall performance improvement is achieved in the MTL model compared to the STL model over both balanced and imbalanced data set (Summary is shown in table 1 below). 
 
 |Learning model | Balanced  | Imbalanced| 
 | ------------- | :-------: | :-------: | 
@@ -75,6 +79,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
 **MTL Balanced dataset**
+
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.39      | 0.50      |0.44      | 
