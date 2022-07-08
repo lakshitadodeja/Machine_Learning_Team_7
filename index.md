@@ -130,8 +130,16 @@ We use the same metrics (precision, recall, and F1) used to evaluate supervised 
 
 * **t-SNE**
 
-We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 4-a and 4-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 4-c and 4-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
-
+We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 5-a and 5-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 5-c and 5-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
+ 
+ The accuracy of the various combinations of data and number of clusters is given in table 4. It is to be noted that the accuracy for imbalanced dataset has only one cluster and does not classify and label the other clusters. This can be seen in table 5(a).
+ 
+ |No of Clusters | Balanced  | Imbalanced| 
+ |-------------  | :-------: | :-------: | 
+ | 3             | 0.40      | 0.58      | 
+ | 15            | 0.38      | 0.58      |
+ | 25            | 0.50      | 0.58      |
+**Table 4: Summary of accuracy results for T-SNE dimension reduced data over balanced and imbalanced data sets.**
 
 <table>
 <tr><th> a. Imbalanced dataset for 3 Clusters</th><th> b. Balanced dataset for 3 clusters</th></tr>
@@ -182,7 +190,7 @@ We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
     
 </td></tr> </table>
 
-**Table 4(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
+**Table 5(a-d): Summary of precision, recall and F1-scores for TSNE for 3 components over balanced and unbalanced data sets.**
 
 ### Gantt Chart 
 
