@@ -76,7 +76,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 | Effective     | 0.71      | 0.08     | 0.15      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 
 | Ineffective   | 0.72      | 0.58     | 0.64      |   
-| Macro avg.  | 0.70      | 0.52     | 0.52      | 
+| Macro avg.    | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
 </td><td>
