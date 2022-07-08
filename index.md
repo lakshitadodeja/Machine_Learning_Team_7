@@ -47,7 +47,7 @@ We will also qualitatively compare approaches using transcripts of court proceed
 
 ### Midterm Report Checkpoint 
 
-**1. Supervised learning metrics discussion**
+**1. Supervised learning: Results and Discussion**
 
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
 In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets.  
@@ -122,7 +122,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 2. Recall: TP/(TP+FN) - indicates the fraction of all positive samples were correctly predicted as positive by the classifier.
 3. f1_score: 2*(Precision.Recall)/(Precision + Recall) -is the harmonic mean of Precision and Recall. Research has shown that the F1 score is a better performance metrics than accuracy score for highly imbalanced datasets. 
 
-**2. Unsupervised learning: results and discussion**
+**2. Unsupervised learning: Results and Discussion**
 
 We use the same metrics (precision, rcall, F1, accuracy) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
 
