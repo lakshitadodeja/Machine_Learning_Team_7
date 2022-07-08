@@ -63,9 +63,9 @@ As expected, overall performance improvement is achieved in the imbalanced data 
 
 **Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
-For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels. The recall scores of MTL showed better performance for effective argument compared to STL.  
+For the balanced data set, the performance scores were mostly consistent for both MTL and STL. Noticeable performance variations were in the adequate and effective labels where the MTL performed better for precision and recall scores respectively.
 
-For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL, but performed lower for precision. (Report summary is shown in table 2(a-d)).
+For the imbalanced data set, the recall and f1-scores improved with MTL compared to the STL as expected, but performed lower for precision. (Report summary is shown in table 2(a-d)).
 
 <table>
 <tr><th>STL Imbalanced dataset </th><th>STL Balanced dataset</th></tr>
@@ -73,9 +73,9 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
     
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.71      | 0.08     | 0.15      | 
+| Ineffective   | 0.71      | 0.08     | 0.15      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 
-| Ineffective   | 0.72      | 0.58     | 0.64      |   
+| Effective.    | 0.72      | 0.58     | 0.64      |   
 | Macro avg.    | 0.70      | 0.52     | 0.52      | 
 | Weighted  avg.| 0.69      | 0.68     | 0.63      | 
 
@@ -83,9 +83,9 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
 
 |Labels         | Precision | Recall    | F1-score |  
 | ------------- | :-------: | :-------: | :-------:| 
-| Effective     | 0.39      | 0.50      |0.44      | 
+| Ineffective   | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.68      | 0.68      |0.68      | 
-| Ineffective   | 0.70      | 0.57      |0.63      | 
+| Effective     | 0.70      | 0.57      |0.63      | 
 | Macro avg.    | 0.59      | 0.58      |0.58      |
 | Weighted  avg.| 0.64      | 0.62      |0.62      | 
     
@@ -97,9 +97,9 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.46      | 0.26     | 0.33      | 
+| Ineffective   | 0.46      | 0.26     | 0.33      | 
 | Adequate      | 0.66      | 0.83     | 0.74      | 
-| Ineffective   | 0.71      | 0.53     | 0.61      | 
+| Effective     | 0.71      | 0.53     | 0.61      | 
 | Macro avg.    | 0.61      | 0.54     | 0.56      | 
 | Weighted  avg.| 0.64      | 0.65     | 0.63      | 
 
@@ -107,9 +107,9 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Effective     | 0.38      | 0.52     | 0.44      | 
+| Ineffective   | 0.38      | 0.52     | 0.44      | 
 | Adequate      | 0.73      | 0.50     | 0.60      | 
-| Ineffective   | 0.55      | 0.79     | 0.65      | 
+| Effective     | 0.55      | 0.79     | 0.65      | 
 | Macro avg.    | 0.55      | 0.61     | 0.56      | 
 | Weighted  avg.| 0.62      | 0.58     | 0.58      | 
     
