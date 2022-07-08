@@ -50,7 +50,7 @@ We will also qualitatively compare approaches using transcripts of court proceed
 **1. Supervised learning: Results and Discussion**
 
 As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
-In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets.  
+In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. We have used BERT embeddings for Supervised Learning for now. We will also try to use T5 embeddings for our final report. 
 
 For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
 
