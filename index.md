@@ -71,7 +71,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <tr><th>MTL Imbalanced dataset </th><th>MTL Balanced dataset</th></tr>
 <tr><td>
     
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.71      | 0.08     | 0.15      | 
 | Adequate      | 0.67      | 0.90     | 0.77      | 
@@ -81,7 +81,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 </td><td>
 
-|Labels         | Precision | Recall    | F1-score |  
+|Labels         | Precision | Recall    | F1 |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.39      | 0.50      |0.44      | 
 | Adequate      | 0.68      | 0.68      |0.68      | 
@@ -95,7 +95,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 <tr><th>STL Imbalanced dataset </th><th>STL Balanced dataset</th></tr>
 <tr><td>
               
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.46      | 0.36     | 0.33      | 
 | Adequate      | 0.66      | 0.83     | 0.74      | 
@@ -105,7 +105,7 @@ Interestingly for the imbalanced data set, the recall and f1-score improved with
 
 </td><td>
               
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.38      | 0.52     | 0.44      | 
 | Adequate      | 0.73      | 0.50     | 0.60      | 
@@ -134,7 +134,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 <tr><td>
 
     
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.00      | 0.00     | 0.00      | 
 | Adequate      | 0.58      | 1.00     | 0.73      | 
@@ -144,7 +144,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 </td><td>
 
-|Labels         | Precision | Recall    | F1-score |  
+|Labels         | Precision | Recall    | F1 |  
 | ------------- | :-------: | :-------: | :-------:| 
 | Effective     | 0.29      | 0.38      | 0.33     | 
 | Adequate      | 0.60      | 0.38      | 0.46     | 
@@ -158,7 +158,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 <tr><th>Balanced dataset for 10 Clusters</th><th> Balanced dataset for 25 Clusters</th></tr>
 <tr><td>
               
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.30      | 0.54     | 0.38      | 
 | Adequate      | 0.62      | 0.28     | 0.39      | 
@@ -168,7 +168,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 </td><td>
               
-|Labels         | Precision | Recall   | F1-score  | 
+|Labels         | Precision | Recall   | F1  | 
 | ------------- | :-------: | :-------:| :-------: | 
 | Effective     | 0.46      | 0.58     | 0.51      | 
 | Adequate      | 0.48      | 0.41     | 0.44      | 
