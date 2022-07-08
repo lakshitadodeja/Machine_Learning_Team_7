@@ -130,7 +130,7 @@ We use the same metrics (precision, rcall, F1, accuracy) used to evaluate superv
 
 * **t-SNE**
 
-We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15,25... It can be inferred from tables 4-a and 4-b, the noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The balanced data has significant performance improvement from 10 to 25 clusters, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
+We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 4-a and 4-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 4-c and 4-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
 
 
 <table>
