@@ -11,34 +11,36 @@ Due to resource constraints and limitations especially in underrepresented commu
 ### Data Collection 
 Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k excerpt from essays written by U.S students in grades 6-12. 
 
-In Fig. 1, we present a word cloud of our data, to have an insight into the theme of the essays in our data set. Key words such as - student, classes, online, school, public, college, people, education e.t.c are the most occuring words in our data set, therefore, we can conclude that the theme of the essays is related to Eductaion.
+In Fig. 1, we present a word cloud of the data to have an insight into the theme of the essays contained in the dataset. Through key words such as - student, classes, online, education e.t.c, we can conclude that the theme of the essays is on Eductaion.
+    
+![Word_cloud](https://user-images.githubusercontent.com/107268741/181771859-63d4a363-8585-4e80-9555-fd5fdd3f2ead.png)
 
-![Word cloud visualization](/Machine_Learning_Team_7/Word_cloud.png)
 **Fig.1.** Word cloud representation of the Essays in the dataset
 
-**Characteristics**
+**Characteristics of the dataset**
 1. Size of dataset = (36765, 5)
 2. Number of Essays = 4191
-3. The dimensions of the data set includes the discourse_id, essay_id, discourse_text, discourse_type and discourse_effectiveness.
+3. The dimensions of the data set includes; discourse_id, essay_id, discourse_text, discourse_type and discourse_effectiveness.
 4. Each student essay is represented by the essay_ids, which the  discourse_ids are mapped to. The discourse_id is the unique classifier for each argument (discourse_text) to be classified. Each discourse_type corresponds to one of the seven discourse elements, and one of the discourse_effectiveness class - Effective, Adequate, and Ineffective. 
+
+<img width="845" alt="Screen_Shot_dataset " src="https://user-images.githubusercontent.com/107268741/181773084-8f751baf-66b6-4570-bb40-0ddaf8cfc1e5.png">
 
 **Fig.2.** Displaying a few rows of our dataset 
 
+5. It is important to note that the dataset is unbalanced. Out of the 36k discourse_ids, more than 20k are rated "adequate", whereas only 6k "ineffective" and 9k "effective" arguments exist (Displayed in Fig. 3). Such imbalanced training could bias the final model. Therefore, this inbalance in training is countered either by random oversampling for unsupervised learning, and through weighted loss function in supervised learrning. Results will be presented for balanced and unbalanced training.
 
-It is important to note that the dataset in unbalanced. Out of the 36k discourse_ids, more than 20k are rated "adequate", whereas only 6k "ineffective" and 9k "effective" arguments exist. Such imbalanced training could bias the final model. Therefore, this inbalance in training is countered either by random oversampling for unsupervised learning, and through weighted loss function in supervised learrning. Results will be presented for balanced and unbalanced training.
+![Plot_of_discourse_effectiveness_class](https://user-images.githubusercontent.com/107268741/181773291-d5fa7fb6-d556-4d45-967d-557f5fcf6b6e.png)
 
-Fig. 3 and Fig. 4 Visualizes the distribution of the discourse_effectiveness classes and the discourse_type respectively. 
+**Fig.3** Distribution of the discourse_effectiveness class 
 
+6. Additionally, The plot of the discourse_type shows that the arguments in the data set contains more Evidence and Claim based elements compared to the other discourse elements(Fig. 4).
 
-Finally, in Fig. 5, we analyzed the contents of unique essay ids, to understand the distribution of discourse_ids in each essay. The distribution is centered around 8-12 discourse_elements per essay_ids. 
+![discourse_type_distribution](https://user-images.githubusercontent.com/107268741/181773394-d94549de-158d-4432-8c68-2a73abf57ea6.png)
 
+**Fig.5** Distribution of the discourse_type
 
-
-
-
-
+**Train and Test Data**
 To build our model, we split the dataset into train and test data using an 80:20 split. The table below summarises the charactersitics of the train and test data with respect to the discourse_effectiveness classes. 
-
 
 | Dataset    | Adequate  | Effective | Ineffective |
 | ---------- | :-------: | :-------: |  :-------:  |
@@ -47,8 +49,8 @@ To build our model, we split the dataset into train and test data using an 80:20
 
 **Table 1.** Summary of the characteristics of the train and test data
 
-
 In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective.
+
 
 ### Methods
 In this project, we attempt to predict these ratings through Supervised and Unsupervised learning methods. As this classification problem is based on textual inputs, we will use Natural Language Processing techniques to approach this problem.
