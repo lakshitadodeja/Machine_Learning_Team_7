@@ -44,6 +44,7 @@ To build our model, we split the dataset into train and test data using an 80:20
 | Train      | 1678      | 7435      | 5209        |
 | Test       | 4200      | 1891      | 1253        |
 
+**Table 1.** Summary of the characteristics of the train and test data
 
 
 In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective.
@@ -94,16 +95,16 @@ For single task learning, we appeneded the discourse type with the discourse tex
 As expected, STL achives higher accuracy than MTL, and accuracy for models trainined imbalanced data has higher accuracy than a model trained on balanced data. (Summary is shown in table 1 below). 
 
 <!---
-overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 1 below). 
+overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 2 below). 
 --->
 |Learning model | Balanced  | Imbalanced| 
 | ------------- | :-------: | :-------: | 
 | STL           | 0.62      | 0.68      | 
 | MTL           | 0.58      | 0.65      | 
 
-**Table 1: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
+**Table 2: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
-However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (see recall in Table 2. a and 2. c in comparision to Table 2. b and Table 2. d respectively). Whereas, for the balanced data set, the performance scores were mostly consistent for both MTL and STL. Additionally, we see a distinction between STL and MTL models. In general, MTL models are more robust to imbalanced training. This is also reflected in the MTL model performance for imbalanced training - we see a more consistent performance across all labels ("adequate", "effective" and "ineffective) for MTL (Table 2. c) vis-a-vis STL performance (see Table 2.a). The performance metrics are summarized below in Table 2.
+However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (see recall in Table 3. a and 3. c in comparision to Table 3. b and Table 3. d respectively). Whereas, for the balanced data set, the performance scores were mostly consistent for both MTL and STL. Additionally, we see a distinction between STL and MTL models. In general, MTL models are more robust to imbalanced training. This is also reflected in the MTL model performance for imbalanced training - we see a more consistent performance across all labels ("adequate", "effective" and "ineffective) for MTL (Table 2. c) vis-a-vis STL performance (see Table 3.a). The performance metrics are summarized below in Table 3.
 
 <table>
 <tr><th> a. STL Imbalanced dataset </th><th> b. STL Balanced dataset</th></tr>
@@ -153,7 +154,7 @@ However, this superior performance is limited to majority class. For minority cl
     
 </td></tr> </table>
 
-**Table 2(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
+**Table 3(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
 
 **Note:**
 1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
