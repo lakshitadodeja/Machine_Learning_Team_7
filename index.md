@@ -13,6 +13,7 @@ Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<
 
 In Fig. 1, we present a word cloud of our data, to have an insight into the theme of the essays in our data set. Key words such as - student, classes, online, school, public, college, people, education e.t.c are the most occuring words in our data set, therefore, we can conclude that the theme of the essays is related to Eductaion.
 
+![Word cloud visualization](/Machine_Learning_Team_7/Word_cloud.png)
 **Fig.1.** Word cloud representation of the Essays in the dataset
 
 **Characteristics**
