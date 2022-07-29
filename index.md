@@ -6,7 +6,47 @@ Academic writing is a crucial part of life and the need to ensure students devel
 AES systems such as Accessor, e-rater and Project Essay Grade<sup>[2]</sup>, use linear regression and hand-crafted features such as proposition counts and length of essays. Other sophisticated AES are limited by cost, and they often fail to evaluate the quality of argumentative elements, such as organization, evidence, and idea development. Deep Learning-based models and word embeddings<sup>[3]</sup> are currently being explored to address these limitations.
 
 ### Problem Statement
-Due to resource constraints and limitations especially in underrepresented communities, teachers’ ability to issue writing tasks and feedback to students are limited. We will train a model to classify argumentative elements in student writing as "effective," "adequate," or "ineffective”. Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k paragraphs/excerpts extracted from 4200 essays written by U.S students in grades 6-12. Each excerpt is rated as "effective," "adequate," or "ineffective” and it belongs to one of the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. This will enable students get automated guidance and feedback on writing tasks and help them improve their writing skills.  
+Due to resource constraints and limitations especially in underrepresented communities, teachers’ ability to issue writing tasks and feedback to students are limited. We will train a model to classify argumentative elements in student writing as "effective," "adequate," or "ineffective”. Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k paragraphs/excerpts extracted from 4191 essays written by U.S students in grades 6-12. Each excerpt is rated as "effective," "adequate," or "ineffective” and it belongs to one of the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. This will enable students get automated guidance and feedback on writing tasks and help them improve their writing skills.  
+
+### Data Collection 
+Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k excerpt from essays written by U.S students in grades 6-12. 
+
+In Fig. 1, we present a word cloud of our data, to have an insight into the theme of the essays in our data set. Key words such as - student, classes, online, school, public, college, people, education e.t.c are the most occuring words in our data set, therefore, we can conclude that the theme of the essays is related to Eductaion.
+
+**Fig.1.** Word cloud representation of the Essays in the dataset
+
+**Characteristics**
+1. Size of dataset = (36765, 5)
+2. Number of Essays = 4191
+3. The dimensions of the data set includes the discourse_id, essay_id, discourse_text, discourse_type and discourse_effectiveness.
+4. Each student essay is represented by the essay_ids, which the  discourse_ids are mapped to. The discourse_id is the unique classifier for each argument (discourse_text) to be classified. Each discourse_type corresponds to one of the seven discourse elements, and one of the discourse_effectiveness class - Effective, Adequate, and Ineffective. 
+
+**Fig.2.** Displaying a few rows of our dataset 
+
+
+It is important to note that the dataset in unbalanced. Out of the 36k discourse_ids, more than 20k are rated "adequate", whereas only 6k "ineffective" and 9k "effective" arguments exist. Such imbalanced training could bias the final model. Therefore, this inbalance in training is countered either by random oversampling for unsupervised learning, and through weighted loss function in supervised learrning. Results will be presented for balanced and unbalanced training.
+
+Fig. 3 and Fig. 4 Visualizes the distribution of the discourse_effectiveness classes and the discourse_type respectively. 
+
+
+Finally, in Fig. 5, we analyzed the contents of unique essay ids, to understand the distribution of discourse_ids in each essay. The distribution is centered around 8-12 discourse_elements per essay_ids. 
+
+
+
+
+
+<!---
+To build our model, we split the dataset into train and test data using an 80:20 split. The table below summarises the charactersitics of the train and test data with respect to the discourse_effectiveness classes. 
+
+--->
+| Dataset    | Adequate  | Effective | Ineffective |
+| ---------- | :-------: | :-------: |  :-------:  |
+| Train      | 1678      | 7435      | 5209        |
+| Test       | 4200      | 1891      | 1253        |
+
+
+
+In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective.
 
 ### Methods
 In this project, we attempt to predict these ratings through Supervised and Unsupervised learning methods. As this classification problem is based on textual inputs, we will use Natural Language Processing techniques to approach this problem.
@@ -35,10 +75,7 @@ We also compare the effect of dimensionality reduction techniques before cluster
     2. T-SNE<sup>[11]</sup>
 --->
 
-### Data Collection 
-Our [dataset](https://www.kaggle.com/competitions/feedback-prize-effectiveness)<sup>[4]</sup> contains about 36k excerpt from essays written by U.S students in grades 6-12 and contains features corresponding to the seven discourse elements - lead, position, claim, counterclaim, rebuttal, evidence and concluding statement. In the following sections, we will explore these datasets in detail, and develop a model to classify arguments as effective, inadequate and ineffective. 
 
-It is important to note that the dataset in unbalanced. Out of the 36k datapoints/exerpts, more than 20k are rated "adequate", whereas only 6k "ineffective" and 9k "effective" arguments exist. Such imbalanced training could bias the final model. Therefore, this inbalance in training is countered either by random oversampling for unsupervised learning, and through weighted loss function in supervised learrning. Results will be presented for balanced and unbalanced training.
 
 ### Potential Results and Discussion
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
