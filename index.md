@@ -44,8 +44,8 @@ To build our model, we split the dataset into train and test data using an 80:20
 
 | Dataset    | Adequate  | Effective | Ineffective |
 | ---------- | :-------: | :-------: |  :-------:  |
-| Train      | 1678      | 7435      | 5209        |
-| Test       | 4200      | 1891      | 1253        |
+| Train      | 16768     | 7435      | 5209        |
+| Test       | 4209      | 1891      | 1253        |
 
 **Table 1.** Summary of the characteristics of the train and test data
 
@@ -308,6 +308,13 @@ The accuracy of the reduced data over various clusters is given in table 4. It i
 
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 clusters (Table 6. d) is seen to provide the best mix of accuracy and generalization across classes. 
 
+### Conclusion    
+
+As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We were able to gain insghts into the accuracies of supervised and unspervised learning methods.
+    
+This work while currently being explored for essay writings in teh education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
+    
+    
 ### Gantt Chart 
 
 The Gantt chart for our project can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/sjain443_gatech_edu/EVY1kVoq6ixHlA6FHNfmD4wBotXA6n20QsYxsModKdRhPA?e=2YC7zb&isSPOFile=1)
