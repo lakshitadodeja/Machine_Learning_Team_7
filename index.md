@@ -35,10 +35,10 @@ Finally, in Fig. 5, we analyzed the contents of unique essay ids, to understand 
 
 
 
-<!---
+
 To build our model, we split the dataset into train and test data using an 80:20 split. The table below summarises the charactersitics of the train and test data with respect to the discourse_effectiveness classes. 
 
---->
+
 | Dataset    | Adequate  | Effective | Ineffective |
 | ---------- | :-------: | :-------: |  :-------:  |
 | Train      | 1678      | 7435      | 5209        |
