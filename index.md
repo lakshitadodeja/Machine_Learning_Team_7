@@ -59,10 +59,15 @@ In this project, we attempt to predict these ratings through Supervised and Unsu
 
 
 1.	BERT<sup>[5]</sup> : We will use pretrained BERT embeddings with trainable hidden layers to obtain accurate classification of each essays 
-2.	DeBERTa<sup>[6]</sup> : DeBERTa uses disentangled attention mechanism and an enhanced masked encoder to improve the accuracy of BERT. The most recent version of DeBERTa was publushed by Microsoft Research in 202
+2.	DeBERTa<sup>[6]</sup> :As a second method, we will use embeddings from the recenlty release model by Microsft - DeBERTa. It uses disentangled attention mechanism and an enhanced masked encoder to improve the accuracy of BERT. 
 3.	Bidirectional GRU<sup>[7]</sup> :  We will use bidirectional GRUs to model the contexts from both directions, enabling the model to make a more informed decision for our task 
 
-For BERT and T5, we will perform both multitask and single-task learning.
+For BERT and DeBERTa, we will perform both single task and multi task learning.
+
+1. Singl Task Learning (STL) : We will appened the discourse type with the discourse text and use that as the input to our NLP model and predict the effectiveness of the argument.
+2. Multi Task Learning (MTL) : We will perform the following two tasks using a single model in hope of enhancing our model capability
+    1.  Predict the discourse type 
+    2.  Predict the discourse effectiveness 
 
 **Unsupervised Learning Methods**
 
@@ -81,20 +86,16 @@ We also compare the effect of dimensionality reduction techniques before cluster
 
 
 ### Results and Discussion
-All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
-
-We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
 <!--- ### Midterm Report Checkpoint --->
 
-**1. Supervised learning: Results and Discussion**
+**1. Supervised learning: Results and Discussion** 
 
-As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented for supervised learning. 
-In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets.  
+One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used the *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets. Since we were using Google Colab for our training we could not load the full BERT model due to memoery issues. Therefore we used Distil BERT which removed the redundant parameters from BERT and still gives comparable performance. 
 
-For single task learning, we appeneded the discourse type with the discourse text and tried to predict the effectiveness. Whereas for the multi task learning we tried to predict the discourse type as well as discourse text during our training process. One of the issues with our dataset was that it was imbalanced. There were far more data points for "Adequate" class than the other two. We used *WeightedSampler* in Pytorch in our data loader which samples the training data based on their frequency. We have presented results for STL and MTL with balanced and imbalanced datasets
+As discussed above, Single task learning (STL) and multitask learning (MTL) were implemented using both BERT and DeBERTa embeddings. We also developed a Bidirectional GRU model for Single Task Learning on Imbalanced Dataset.  In the multi-class classification for the three class arguments – Effective, Adequate and Ineffective, we compared precision, recall and f1 scores for STL and MTL models over balanced and imbalanced data sets. 
 
-As expected, STL achives higher accuracy than MTL, and accuracy for models trainined imbalanced data has higher accuracy than a model trained on balanced data. (Summary is shown in table 1 below). 
+As expected, STL achives higher accuracy than MTL, and accuracy for models trainined imbalanced data has higher accuracy than a model trained on balanced data. Moreover DeBERTa embeddings gave a better performance over the BERT embeddings and BiGRU had the worst performance. (Summary is shown in table 1 below). 
 
 <!---
 overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 2 below). 
@@ -107,7 +108,7 @@ overall performance improvement is achieved in the imbalanced data for both MTL 
 |DeBERTa   |  MTL          | 0.64      | 0.67      | 
 |BiGRU     |  STL          | -         | 0.60      | 
 
-**Table 2: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
+**Table 2: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets using BERT, DeBERTA and BiGRU model.**
 
 However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (see recall in Table 3. a and 3. c in comparision to Table 3. b and Table 3. d respectively). Whereas, for the balanced data set, the performance scores were mostly consistent for both MTL and STL. Additionally, we see a distinction between STL and MTL models. In general, MTL models are more robust to imbalanced training. This is also reflected in the MTL model performance for imbalanced training - we see a more consistent performance across all labels ("adequate", "effective" and "ineffective) for MTL (Table 2. c) vis-a-vis STL performance (see Table 3.a). The performance metrics are summarized below in Table 3.
 
