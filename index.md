@@ -322,7 +322,7 @@ To conclude, among the unsupervised learning models considered, the balanced lea
 
 As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We were able to gain insghts into the accuracies of supervised and unspervised learning methods.
     
-This work while currently being explored for essay writings in teh education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
+This work while currently being explored for essay writings in the education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
     
     
 ### Gantt Chart 
