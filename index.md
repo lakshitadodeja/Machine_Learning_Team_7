@@ -104,7 +104,7 @@ As expected, STL achives higher accuracy than MTL, and accuracy for models train
 <!---
 overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 2 below). 
 --->
-|Model used|Learning model | Balanced  | Imbalanced| 
+|Model used|Learning method | Balanced  | Imbalanced| 
 |:--------:| ------------- | :-------: | :-------: | 
 |BERT      |  STL          | 0.62      | 0.68      | 
 |BERT      |  MTL          | 0.58      | 0.65      | 
