@@ -59,9 +59,8 @@ In this project, we attempt to predict these ratings through Supervised and Unsu
 
 
 1.	BERT<sup>[5]</sup> : We will use pretrained BERT embeddings with trainable hidden layers to obtain accurate classification of each essays 
-2.	T5<sup>[6]</sup> : T5 is a 220 million parameter model pre-trained on a multi-task mixture of unsupervised and supervised tasks. We will finetune this model for our classification task. 
+2.	DeBERTa<sup>[6]</sup> : DeBERTa uses disentangled attention mechanism and an enhanced masked encoder to improve the accuracy of BERT. The most recent version of DeBERTa was publushed by Microsoft Research in 202
 3.	Bidirectional GRU<sup>[7]</sup> :  We will use bidirectional GRUs to model the contexts from both directions, enabling the model to make a more informed decision for our task 
-4.	We will also be using the Pegasus paraphrasing software to augment our training data.<sup>[8]</sup>
 
 For BERT and T5, we will perform both multitask and single-task learning.
 
@@ -81,12 +80,12 @@ We also compare the effect of dimensionality reduction techniques before cluster
 
 
 
-### Potential Results and Discussion
+### Results and Discussion
 All approaches will be objectively compared through metrics such as accuracy, F1 score, precision, and recall. 
 
 We will also qualitatively compare approaches using transcripts of court proceeding (Trial of Johnny Depp vs Amber Heard). The output of each argument will described  "effective," "adequate," or "ineffective” classification goal of our project. 
 
-### Midterm Report Checkpoint 
+<!--- ### Midterm Report Checkpoint --->
 
 **1. Supervised learning: Results and Discussion**
 
@@ -100,17 +99,20 @@ As expected, STL achives higher accuracy than MTL, and accuracy for models train
 <!---
 overall performance improvement is achieved in the imbalanced data for both MTL and STL models compared to the results obtained with the balanced data set.(Summary is shown in table 2 below). 
 --->
-|Learning model | Balanced  | Imbalanced| 
-| ------------- | :-------: | :-------: | 
-| STL           | 0.62      | 0.68      | 
-| MTL           | 0.58      | 0.65      | 
+|Model used|Learning model | Balanced  | Imbalanced| 
+|:--------:| ------------- | :-------: | :-------: | 
+|BERT      |  STL          | 0.62      | 0.68      | 
+|BERT      |  MTL          | 0.58      | 0.65      | 
+|DeBERTa   |  STL          | 0.66      | 0.69      | 
+|DeBERTa   |  MTL          | 0.64      | 0.67      | 
+|BiGRU     |  STL          | -         | 0.60      | 
 
 **Table 2: Summary of accuracy results for STL and MTL over balanced and unbalanced data sets.**
 
 However, this superior performance is limited to majority class. For minority class like "ineffective", the imbalanced models have very poor performance (see recall in Table 3. a and 3. c in comparision to Table 3. b and Table 3. d respectively). Whereas, for the balanced data set, the performance scores were mostly consistent for both MTL and STL. Additionally, we see a distinction between STL and MTL models. In general, MTL models are more robust to imbalanced training. This is also reflected in the MTL model performance for imbalanced training - we see a more consistent performance across all labels ("adequate", "effective" and "ineffective) for MTL (Table 2. c) vis-a-vis STL performance (see Table 3.a). The performance metrics are summarized below in Table 3.
 
 <table>
-<tr><th> a. STL Imbalanced dataset </th><th> b. STL Balanced dataset</th></tr>
+<tr><th> a. STL Imbalanced dataset (BERT) </th><th> b. STL Balanced dataset (BERT)</th></tr>
 <tr><td>
     
 |Labels         | Precision | Recall   | F1-score  | 
@@ -134,7 +136,7 @@ However, this superior performance is limited to majority class. For minority cl
 </td></tr> </table>
 
 <table>
-<tr><th> c. MTL Imbalanced dataset </th><th> d. MTL Balanced dataset</th></tr>
+<tr><th> c. MTL Imbalanced dataset (BERT) </th><th> d. MTL Balanced dataset (BERT)</th></tr>
 <tr><td>
               
 |Labels         | Precision | Recall   | F1-score  | 
@@ -157,7 +159,55 @@ However, this superior performance is limited to majority class. For minority cl
     
 </td></tr> </table>
 
-**Table 3(a-d): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets.**
+<table>
+<tr><th> e. STL Imbalanced dataset (DeBERTa)</th><th> f. STL Balanced dataset (DeBERTa)</th></tr>
+<tr><td>
+    
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.55      | 0.29     | 0.38      | 
+| Adequate      | 0.68      | 0.85     | 0.76      | 
+| Effective.    | 0.76      | 0.57     | 0.65      |   
+| Macro avg.    | 0.66      | 0.57     | 0.60      | 
+| Weighted  avg.| 0.68      | 0.69     | 0.67      | 
+
+</td><td>
+
+|Labels         | Precision | Recall    | F1-score |  
+| ------------- | :-------: | :-------: | :-------:| 
+| Ineffective   | 0.47      | 0.39      |0.42      | 
+| Adequate      | 0.67      | 0.80      |0.73      | 
+| Effective     | 0.76      | 0.51      |0.61      | 
+| Macro avg.    | 0.63      | 0.57      |0.59      |
+| Weighted  avg.| 0.66      | 0.66      |0.65      | 
+    
+</td></tr> </table>
+
+<table>
+<tr><th> g. MTL Imbalanced dataset (DeBERTa) </th><th> h. MTL Balanced dataset (DeBERTa) </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.56      | 0.15     | 0.23      | 
+| Adequate      | 0.68      | 0.82     | 0.75      | 
+| Effective     | 0.66      | 0.68     | 0.67      | 
+| Macro avg.    | 0.63      | 0.55     | 0.55      | 
+| Weighted  avg.| 0.66      | 0.67     | 0.64      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.43      | 0.36     | 0.39      | 
+| Adequate      | 0.70      | 0.70     | 0.70      | 
+| Effective     | 0.62      | 0.68     | 0.65      | 
+| Macro avg.    | 0.58      | 0.58     | 0.58      | 
+| Weighted  avg.| 0.63      | 0.64     | 0.63      | 
+    
+</td></tr> </table>
+
+**Table 3(a-h): Summary of precision, recall and F1-scores for STL and MTL over balanced and imbalanced data sets for BERT and DeBERTA.**
 
 **Note:**
 1. Precision: TP/(TP+FP) -  indicates  what fraction of predictions as a positive class were actually positive.	
@@ -322,7 +372,7 @@ To conclude, among the unsupervised learning models considered, the balanced lea
 
 As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We were able to gain insghts into the accuracies of supervised and unspervised learning methods.
     
-This work while currently being explored for essay writings in the education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
+This work while currently being explored for essay writings in teh education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
     
     
 ### Gantt Chart 
@@ -336,7 +386,7 @@ The Gantt chart for our project can be found [here](https://gtvault-my.sharepoin
 [3]	K. Taghipour and H. T. Ng, “A neural approach to automated essay scoring,” in Proceedings of the 2016 Conference on EMNLP, 2016, pp. 1882–1891.\
 [4]	Feedback Prize - Predicting Effective Arguments, link : https://www.kaggle.com/competitions/feedback-prize-effectiveness\
 [5]	Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." arXiv preprint arXiv:1810.04805 (2018).\
-[6]	Raffel, Colin, et al. "Exploring the limits of transfer learning with a unified text-to-text transformer." arXiv preprint arXiv:1910.10683 (2019).\
+[6]	He, Pengcheng, et al. "Deberta: Decoding-enhanced bert with disentangled attention." arXiv preprint arXiv:2006.03654 (2020).\
 [7]	Cho, Kyunghyun, et al. "On the properties of neural machine translation: Encoder-decoder approaches." arXiv preprint arXiv:1409.1259 (2014).\
 [8]	Zhang, Jingqing, et al. "Pegasus: Pre-training with extracted gap-sentences for abstractive summarization." International Conference on Machine Learning. PMLR, 2020.\
 [9]	Forgy, Edward W. "Cluster analysis of multivariate data: efficiency versus interpretability of classifications." biometrics 21 (1965): 768-769.\
