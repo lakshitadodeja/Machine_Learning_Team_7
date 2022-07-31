@@ -298,14 +298,24 @@ We address this by balancing the training data through ramdom-oversampling. In t
 <!---
 The accuracy of the reduced data over various clusters is given in table 4. It is worth noting that the accuracy for imbalanced dataset has only one cluster and is not able to label the other two clusters. The accuracy remains same as the number of clusters increase. The accuracy for balanced data set dropped a little and increased tremendously as the number of clusters were increased.
 --->
-|Number of Clusters | Balanced  | Imbalanced| 
-| ----------------- | :-------: | :-------: | 
-| 3                 | 0.39      | 0.58      | 
-| 15                | 0.38      | 0.58      | 
-| 25                | 0.48      | 0.58      | 
+    
+     
+|Number of Clusters | Balanced-OneHot | Imbalanced-OneHot | Balanced-BERT | Imbalanced-BERT | 
+| ----------------- | :-------------: | :---------------: | :-----------: | :-------------: |
+| 3                 | 0.39            | 0.58              | 0.37          | 0.57            |
+| 15                | 0.38            | 0.58              | 0.39          | 0.58            |
+| 25                | 0.48            | 0.58              | 0.49          | 0.60            |
 
 **Table 7: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
 
+|Number of Clusters | Balanced-OneHot | Imbalanced-OneHot | Balanced-BERT | Imbalanced-BERT | 
+| ----------------- | :-------------: | :---------------: | :-----------: | :-------------: |
+| 3                 | 0.37            | 0.58              | 0.37          | 0.58            |
+| 15                | 0.38            | 0.58              | 0.43          | 0.57            |
+| 25                | 0.44            | 0.58              | 0.49          | 0.61            |
+    
+**Table 8: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
+    
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 clusters (Table 6. d) is seen to provide the best mix of accuracy and generalization across classes. 
 
 ### Conclusion    
