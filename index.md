@@ -37,7 +37,7 @@ In Fig. 1, we present a word cloud of the data to have an insight into the theme
 
 ![discourse_type_distribution](https://user-images.githubusercontent.com/107268741/181773394-d94549de-158d-4432-8c68-2a73abf57ea6.png)
 
-**Fig.5** Distribution of the discourse_type
+**Fig.4** Distribution of the discourse_type
 
 **Train and Test Data**
 To build our model, we split the dataset into train and test data using an 80:20 split. The table below summarises the charactersitics of the train and test data with respect to the discourse_effectiveness classes. 
@@ -65,9 +65,13 @@ In this project, we attempt to predict these ratings through Supervised and Unsu
 For BERT and DeBERTa, we will perform both single task and multi task learning.
 
 1. Singl Task Learning (STL) : We will appened the discourse type with the discourse text and use that as the input to our NLP model and predict the effectiveness of the argument.
-2. Multi Task Learning (MTL) : We will perform the following two tasks using a single model in hope of enhancing our model capability
+2. Multi Task Learning (MTL) : We will perform the following two tasks using a single model in hope of enhancing our model capability (Figure 4)
     1.  Predict the discourse type 
     2.  Predict the discourse effectiveness 
+
+![discourse_type_distribution](ML_image.png)
+
+**Fig.4** Our Model for Multi Task Learning 
 
 **Unsupervised Learning Methods**
 
