@@ -461,7 +461,7 @@ The performance metrics on the validation data are given below:
         
 </td></tr> </table>
 
-**Table 6 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
+**Table 6 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features**
 
 
 * **t-SNE + BERT encoding**
