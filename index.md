@@ -365,7 +365,7 @@ The performance metrics on the validation data are given below:
 | Weighted  avg.| 0.56      | 0.59     | 0.53      | 
         
 </td></tr> </table>
-**Table : Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
+**Table 6 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
 
 
 * **t-SNE + BERT encoding**
@@ -418,12 +418,12 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 | Weighted  avg.| 0.60      | 0.62     | 0.56      | 
         
 </td></tr> </table>
-**Table : Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
+**Table 7 a-d: Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
 
 
 From these experiements we see that balanced learning performs better than models trained on imbalanced data sets. Also, models based on BERT encodings outperform Tf-Idf encodings based models. This is to be expected because the BERt encodings retain the semantic information of the documents. Whereas, Tf-Idf tokens are independentl of each other thus lack any semantic and sequential information. 
 
-An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables **Include correct numbers **** here** ). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
+An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables 6 and 7). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
 
 The accuray and performance metrics of the top 4 unsupervised models are listed below in Table **list number *** here** for summary. 
 
