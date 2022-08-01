@@ -514,7 +514,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
         
 
 </td><td>
- </table>
+</table>
 **Table 7 a-d: Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
 
 
