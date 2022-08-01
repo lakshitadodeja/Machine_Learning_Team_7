@@ -319,15 +319,6 @@ PCA provides only linear combinaton of input fetaures, which may not be effectiv
 
 The performance metrics on the validation data are given below:
 
-**Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
-
-
-* **t-SNE + BERT encoding**
-
-Similar to the PCA based analysis on BERT encodings, only the CLS token's encoding (768-dimensional) is considered in this analysis. The results are 
-
-**Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
-
 <table>
 <tr><th> a. t-SNE + Tf-Idf Balanced dataset GMM </th><th> b. t-SNE + Tf-Idf Balanced dataset Kmeans  </th></tr>
 <tr><td>
@@ -376,6 +367,10 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 </td></tr> </table>
 **Table : Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features**
 
+
+* **t-SNE + BERT encoding**
+
+Similar to the PCA based analysis on BERT encodings, only the CLS token's encoding (768-dimensional) is considered in this analysis. The results are 
 
 <table>
 <tr><th> a. t-SNE + BERT Balanced dataset GMM </th><th> b. t-SNE + BERT Balanced dataset Kmeans  </th></tr>
