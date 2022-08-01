@@ -252,6 +252,7 @@ Similar experiement was repeated using BERT encodings in place of Tf-Idf vectors
 **Pls include the PCA + BERT tables for GMM and Kmeans here**
 
 
+<!---
 
 <table>
 <tr><th> Training Metrics for 75 features with 15 clusters</th><th> Validation Metrics for 75 features with 15 clusters
@@ -307,6 +308,7 @@ Alternatively, we attempted to execute the KMeans algorithm with 3 clusters (the
 </td></tr> </table>
 
 **Table 5: Summary of metrics for any number of reduced features using PCA, and 3 clusters using balanced data set.**
+--->
    
 * **t-SNE**
 
