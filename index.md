@@ -397,9 +397,10 @@ We used t-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of da
 In terms of accuracy, we see that imbalanced training has higher accuracy than that of balanced training, and it is for all choice of clusters (see Table 5). This is due to the fact that in imbalanced models, all the data points are classified as the majority class. This is seen from the F1-score of zero for "ineffective" and "effective" classes in Table 6. a. In effect, the model has not decipher/learned the difference between the classes, but instead it undefits the data to the majority class.
 
 We address this by balancing the training data through random-oversampling. In this process, similar to supervised learning, we trade-off accuracy for robust/consistent performance across all classes. This explains the drop in accuracy for balanced models in Table 7.
-!<!---
+
+*prev comment-begin*
 The accuracy of the reduced data over various clusters is given in table 4. It is worth noting that the accuracy for imbalanced dataset has only one cluster and is not able to label the other two clusters. The accuracy remains same as the number of clusters increase. The accuracy for balanced data set dropped a little and increased tremendously as the number of clusters were increased.
-!--->
+*prev comment-end*
     
      
 |Number of Clusters | Balanced-OneHot | Imbalanced-OneHot | Balanced-BERT | Imbalanced-BERT | 
