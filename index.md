@@ -377,6 +377,55 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 **Table : Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features**
 
 
+<table>
+<tr><th> a. t-SNE + BERT Balanced dataset GMM </th><th> b. t-SNE + BERT Balanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.32      | 0.60     | 0.42      |
+| Adequate      | 0.70      | 0.36     | 0.48      |  
+| Effective     | 0.44      | 0.67     | 0.53      | 
+| Macro avg.    | 0.49      | 0.55     | 0.48      | 
+| Weighted  avg.| 0.57      | 0.48     | 0.48      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.33      | 0.55     | 0.41      |
+| Adequate      | 0.68      | 0.37     | 0.48      | 
+| Effective     | 0.43      | 0.67     | 0.53      | 
+| Macro avg.    | 0.48      | 0.53     | 0.47      | 
+| Weighted  avg.| 0.56      | 0.48     | 0.48      | 
+    
+</td></tr> </table>
+<table>
+<tr><th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.56      | 0.12     | 0.19      | 
+| Adequate      | 0.63      | 0.88     | 0.73      | 
+| Effective     | 0.60      | 0.37     | 0.46      | 
+| Macro avg.    | 0.59      | 0.46     | 0.46      | 
+| Weighted  avg.| 0.61      | 0.62     | 0.57      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.53      | 0.09     | 0.15      | 
+| Adequate      | 0.62      | 0.87     | 0.73      | 
+| Effective     | 0.59      | 0.39     | 0.47      | 
+| Macro avg.    | 0.58      | 0.45     | 0.45      | 
+| Weighted  avg.| 0.60      | 0.62     | 0.56      | 
+        
+</td></tr> </table>
+**Table : Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
+
+
 From these experiements we see that balanced learning performs better than models trained on imbalanced data sets. Also, models based on BERT encodings outperform Tf-Idf encodings based models. This is to be expected because the BERt encodings retain the semantic information of the documents. Whereas, Tf-Idf tokens are independentl of each other thus lack any semantic and sequential information. 
 
 An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables **Include correct numbers **** here** ). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
