@@ -524,7 +524,19 @@ An interesting observation is that for PCA-based models both clustering performa
 The accuray and performance metrics of the top 4 unsupervised models are listed below in Table **8** for summary. 
 
 **Include the top 4 models with red box in the slides and show their accuray**
+<table>
+<tr><th>  accuray and performance metrics of the top 4 unsupervised models  </th></tr>
+<tr><td>
+              
+|Labels         | Accuracy |
+| ------------- | :------: | 
+| Tf-Idf+PCA    | 0.46     | 
+| BERT+PCA      | 0.49     |
+| Tf-Idf+t-SNE  | 0.46     | 
+| BERT+t-SNE    | 0.48     |
 
+</td><td>
+ </table>
 To conclude, among the unsupervised learning models considered, the balanced learning model with *blah.. blah..blaaahh*. (Table **????**) is seen to provide the best mix of accuracy and generalization across classes. 
 
 
