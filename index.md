@@ -313,7 +313,36 @@ Alternatively, we attempted to execute the KMeans algorithm with 3 clusters (the
    
 * **t-SNE**
 
-We used T-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 6-a and 6-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 6-c and 6-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
+PCA provides only linear combinaton of input fetaures, which may not be effective if the data has nonlinear variation. To account for the nonlinearity in data, we use t-SNE to reduce the high-dimensional encoding space into 2-3 components. Unlike PCA, t-SNE is computationally quite intensive, and we had to limit to the experiements to 3 features. As in the PCA-based experiments, we trained the models on balanced and imabalanced data sets, with GMM and KMeans clustering, and BERT and Tf-Idf vectorizations. 
+
+* **t-SNE + Tf-Idf encoding**
+
+The performance metrics on the validation data are given below:
+
+**Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
+
+
+* **t-SNE + BERT encoding**
+
+Similar to the PCA based analysis on BERT encodings, only the CLS token's encoding (768-dimensional) is considered in this analysis. The results are 
+
+**Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
+
+From these experiements we see that balanced learning performs better than models trained on imbalanced data sets. Also, models based on BERT encodings outperform Tf-Idf encodings based models. This is to be expected because the BERt encodings retain the semantic information of the documents. Whereas, Tf-Idf tokens are independentl of each other thus lack any semantic and sequential information. 
+
+An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables **Include correct numbers **** here** ). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
+
+The accuray and performance metrics of the top 4 unsupervised models are listed below in Table **list number *** here** for summary. 
+
+**Include the top 4 models with red box in the slides and show their accuray**
+
+To conclude, among the unsupervised learning models considered, the balanced learning model with *blah.. blah..blaaahh*. (Table **????**) is seen to provide the best mix of accuracy and generalization across classes. 
+
+
+
+<!---
+
+We used t-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 6-a and 6-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 6-c and 6-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
 
 <table>
 <tr><th> a. Imbalanced dataset for 3 Clusters</th><th> b. Balanced dataset for 3 clusters</th></tr>
@@ -391,13 +420,17 @@ The accuracy of the reduced data over various clusters is given in table 4. It i
 **Table 8: Summary of accuracy results for t-SNE dimension reduced over balanced and imbalanced data sets.**
     
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 clusters (Table 6. d) is seen to provide the best mix of accuracy and generalization across classes. 
+--->
 
-### Conclusion    
+### Conclusion and Future Work
+
+**Just summarize the last 2 slides here**
 
 As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We were able to gain insghts into the accuracies of supervised and unspervised learning methods.
     
 This work while currently being explored for essay writings in teh education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
-    
+
+   
     
 ### Gantt Chart 
 
