@@ -527,7 +527,6 @@ The accuray and performance metrics of the top 4 unsupervised models are listed 
 **Include the top 4 models with red box in the slides and show their accuray**
 <table>
 <th>   accuray and performance metrics of the top 4 unsupervised models   </th>
-<tr><td>
               
 |Labels         | Accuracy |
 | ------------- | :------: | 
