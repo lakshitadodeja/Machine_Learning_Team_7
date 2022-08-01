@@ -351,7 +351,28 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 | Weighted  avg.| 0.51      | 0.42     | 0.43      | 
     
 </td></tr> </table>
-**Table : Summary of metrics for t-SNE+ Tf-Idf balanced dataset with GMM and Kmeans clustering for 100 Clusters and 3 features**
+<table>
+<tr><th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.61      | 0.90     | 0.72      | 
+| Adequate      | 0.48      | 0.06     | 0.11      | 
+| Effective     | 0.52      | 0.26     | 0.35      | 
+| Macro avg.    | 0.53      | 0.41     | 0.39      | 
+| Weighted  avg.| 0.56      | 0.59     | 0.52      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.61      | 0.89     | 0.72      | 
+| Adequate      | 0.48      | 0.11     | 0.18      | 
+| Effective     | 0.51      | 0.23     | 0.32      | 
+| Macro avg.    | 0.53      | 0.41     | 0.41      | 
+| Weighted  avg.| 0.56      | 0.59     | 0.53      | 
+**Table : Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features**
 
 
 From these experiements we see that balanced learning performs better than models trained on imbalanced data sets. Also, models based on BERT encodings outperform Tf-Idf encodings based models. This is to be expected because the BERt encodings retain the semantic information of the documents. Whereas, Tf-Idf tokens are independentl of each other thus lack any semantic and sequential information. 
