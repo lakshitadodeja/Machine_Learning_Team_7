@@ -329,7 +329,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 **Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
 
 <table>
-<tr><th> g. MTL Imbalanced dataset (DeBERTa) </th><th> h. MTL Balanced dataset (DeBERTa) </th></tr>
+<tr><th> a. t-SNE + Tf-Idf Balanced dataset GMM </th><th> b. t-SNE + Tf-Idf Balanced dataset Kmeans  </th></tr>
 <tr><td>
               
 |Labels         | Precision | Recall   | F1-score  | 
