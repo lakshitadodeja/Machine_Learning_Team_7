@@ -235,8 +235,6 @@ We use the same metrics (precision, recall, and F1) used to evaluate supervised 
 
 In order to obtain usable feature vectors as input to unsupervised clustering methods (e.g. KMeans), the Tf-Idf encoded vectors were reduced by many magnitudes using PCA. A variance of at least 50% was retained by the reduced feature vectors. Multiple PCA feature dimensions were tested with GMM and KMeans clustering algorithm to find the optimal model. The results are tabluated below:
 
-**Pls include the PCA+ Tf-Idf tables for GMM and Kmeans here**
-
 <table>
 <tr><th> a. PCA + Tf-Idf Balanced dataset GMM </th><th> b. PCA + Tf-Idf Balanced dataset Kmeans  </th></tr>
 <tr><td>
@@ -298,7 +296,6 @@ Additionally, rather than creating just three clusters, and mapping each cluster
 
 Similar experiement was repeated using BERT encodings in place of Tf-Idf vectors. Note that the output of BERT gives an encoding for each word/token in the input in addition to the overall document level encoding. Since we want to evaluate the overall effectiveness of the whole document rather than a single word, we use BERT encoding corresponding to the CLS token and discard all other encodings. Just as in the case of Tf-Idf vectors, the number of PCA features and clusters are varied. The performance metrics on the validation data are listed below:
 
-**Pls include the PCA + BERT tables for GMM and Kmeans here**
 <table>
 <tr><th> a. PCA + BERT Balanced dataset GMM </th><th> b. PCA + BERT Balanced dataset Kmeans  </th></tr>
 <tr><td>
