@@ -334,8 +334,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Ineffective   | 0.67      | 0.32     | 0.44      | 
-| Adequate      | 0.31      | 0.61     | 0.41      | 
+| Ineffective   | 0.31      | 0.61     | 0.41      |
+| Adequate      | 0.67      | 0.32     | 0.44      |  
 | Effective     | 0.43      | 0.63     | 0.52      | 
 | Macro avg.    | 0.47      | 0.54     | 0.46      | 
 | Weighted  avg.| 0.55      | 0.48     | 0.45      | 
@@ -344,8 +344,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Ineffective   | 0.64      | 0.34     | 0.45      | 
-| Adequate      | 0.29      | 0.53     | 0.37      | 
+| Ineffective   | 0.29      | 0.53     | 0.37      |
+| Adequate      | 0.64      | 0.34     | 0.45      | 
 | Effective     | 0.34      | 0.51     | 0.41      | 
 | Macro avg.    | 0.42      | 0.46     | 0.41      | 
 | Weighted  avg.| 0.51      | 0.42     | 0.43      | 
@@ -357,8 +357,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Ineffective   | 0.61      | 0.90     | 0.72      | 
-| Adequate      | 0.48      | 0.06     | 0.11      | 
+| Ineffective   | 0.48      | 0.06     | 0.11      | 
+| Adequate      | 0.61      | 0.90     | 0.72      | 
 | Effective     | 0.52      | 0.26     | 0.35      | 
 | Macro avg.    | 0.53      | 0.41     | 0.39      | 
 | Weighted  avg.| 0.56      | 0.59     | 0.52      | 
@@ -367,8 +367,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
-| Ineffective   | 0.61      | 0.89     | 0.72      | 
-| Adequate      | 0.48      | 0.11     | 0.18      | 
+| Ineffective   | 0.48      | 0.11     | 0.18      | 
+| Adequate      | 0.61      | 0.89     | 0.72      | 
 | Effective     | 0.51      | 0.23     | 0.32      | 
 | Macro avg.    | 0.53      | 0.41     | 0.41      | 
 | Weighted  avg.| 0.56      | 0.59     | 0.53      | 
