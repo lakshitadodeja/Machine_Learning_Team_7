@@ -536,6 +536,9 @@ The accuray and performance metrics of the top 4 unsupervised models are listed 
 | BERT+t-SNE    | 0.48     |
 
  </table>
+ 
+ **Table 8: Accuracy and Performance metrics of the top 4 Unsupervised Models**
+
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 features and 100 K-means clusters using BERT+PCA (Table **5 a**) is seen to provide the best mix of accuracy and generalization across classes. 
 
 
