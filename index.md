@@ -492,8 +492,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
     
 </td></tr> </table>
 <table>
-<tr><th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th></tr>
-<tr><td>
+<th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th>
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -513,7 +512,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 | Macro avg.    | 0.58      | 0.45     | 0.45      | 
 | Weighted  avg.| 0.60      | 0.62     | 0.56      | 
         
-</td></tr> </table>
+ </table>
 **Table 7 a-d: Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
 
 
