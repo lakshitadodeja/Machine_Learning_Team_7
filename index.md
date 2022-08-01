@@ -283,7 +283,7 @@ In order to obtain usable feature vectors as input to unsupervised clustering me
 | Weighted  avg.| 0.56      | 0.59     | 0.50      | 
         
 </td></tr> </table>
-**Table 4 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
+**Table 4 a-d: Summary of metrics for PCA + Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 75 features**
 
 
 From these experiments, we see that 100 KMeans clusters on 75 PCA features achieves the best performance of 44% accuracy on the validation dataset. As mentioned in the Data Collection section, we observed the dataset to be biased towards one label value (Adequate), which caused the model to assign most clusters to this value. To counter this bias, we oversample the non-majority data using *RandomOverSampling* of *imblearn* module and create multiple samples the under-represented labels. This reduces the bias towards the majority label (Adequate).
