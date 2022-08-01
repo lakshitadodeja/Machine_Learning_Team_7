@@ -229,11 +229,12 @@ For the imbalanced data set, the recall and f1-scores improved with MTL compared
 
 **2. Unsupervised learning: Results and Discussion**
 
-We use the same metrics (precision, recall, and F1) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. 
+We use the same metrics (precision, recall, and F1) used to evaluate supervised learning. Here, the essay discourse information is converted to a one-hot encoding and concatenated to the Tf-idf vector prior to dimensionality reduction. Results for PCA-based feature selection and t-SNE based feature selection are presented next. To perform model selection, the dataset was split 20-80 across the validation and training datasets.  
 
 * **PCA**
 
-In order to obtain usable feature vectors as input to unsupervised clustering methods (e.g. KMeans), the Tf-Idf encoded vectors were reduced by many magnitudes using PCA. A variance of at least 50% was retained by the reduced feature vectors. Multiple PCA feature dimensions were tested with GMM and KMeans clustering algorithm to find the optimal model. The resulst are tabluated below:
+In order to obtain usable feature vectors as input to unsupervised clustering methods (e.g. KMeans), the Tf-Idf encoded vectors were reduced by many magnitudes using PCA. A variance of at least 50% was retained by the reduced feature vectors. Multiple PCA feature dimensions were tested with GMM and KMeans clustering algorithm to find the optimal model. The results are tabluated below:
+
 **Pls include the PCA+one hot tables for GMM and Kmeans here**
 
 From these experiments, we see that 100 KMeans clusters on 75 PCA features achieves the best performance of 44% accuracy on the validation dataset. As mentioned in the Data Collection section, we observed the dataset to be biased towards one label value (Adequate), which caused the model to assign most clusters to this value. To counter this bias, we oversample the non-majority data using *RandomOverSampling* of *imblearn* module and create multiple samples the under-represented labels. This reduces the bias towards the majority label (Adequate).
@@ -242,7 +243,7 @@ From these experiments, we see that 100 KMeans clusters on 75 PCA features achie
 Using KMeans, we were able to achieve an accuracy rate of around 44% with the data that was provided by the Kaggle challenge. As mentioned in the Data Collection section, we observed the dataset to be biased towards one label value (Adequate), which caused the model to assign most clusters to this value. To counter this bias, we balanced the data by oversampling the data, creating multiple samples of the other label values, and reducing the dominating label (Adequate). This in turn increased the accuracy of the model to 44% on the validation set. 
 --->
 
-Additionally, rather than creating just three clusters, and mapping each cluster of KMeans to a label value, we generated multiple clusters, and assigned each cluster to a label value. This decreases the chances of grouping too many datapoints and assigning a single label to a big chunk of data, and increases the likelihood of assigning smaller groups of datapoints within the larger cluster to the correct label. This method of clustering proved ineffective for the unbalanced data as most clusters were assigned to the dominating label, but worked well with the balanced data set. The model was tested using a validation dataset which was extracted from the original dataset. The dataset was split 20-80 across the validation and training datasets. The table below shows the metrics achieved using the mehtods described above.
+Additionally, rather than creating just three clusters, and mapping each cluster of KMeans to a label value, we generated multiple clusters, and assigned each cluster to a label value. This decreases the chances of grouping too many datapoints and assigning a single label to a big chunk of data, and increases the likelihood of assigning smaller groups of datapoints within the larger cluster to the correct label. This method of clustering proved ineffective for the unbalanced data as most clusters were assigned to the dominating label, but worked well with the balanced data set. The model was tested using a validation dataset which was extracted from the original dataset. The table below shows the metrics achieved using the mehtods described above.
 
 <table>
 <tr><th> Training Metrics for 75 features with 15 clusters</th><th> Validation Metrics for 75 features with 15 clusters
