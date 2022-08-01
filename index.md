@@ -299,6 +299,53 @@ Additionally, rather than creating just three clusters, and mapping each cluster
 Similar experiement was repeated using BERT encodings in place of Tf-Idf vectors. Note that the output of BERT gives an encoding for each word/token in the input in addition to the overall document level encoding. Since we want to evaluate the overall effectiveness of the whole document rather than a single word, we use BERT encoding corresponding to the CLS token and discard all other encodings. Just as in the case of Tf-Idf vectors, the number of PCA features and clusters are varied. The performance metrics on the validation data are listed below:
 
 **Pls include the PCA + BERT tables for GMM and Kmeans here**
+<table>
+<tr><th> a. PCA + BERT Balanced dataset GMM </th><th> b. PCA + BERT Balanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.34      | 0.57     | 0.43      |
+| Adequate      | 0.68      | 0.43     | 0.53      |  
+| Effective     | 0.45      | 0.62     | 0.52      | 
+| Macro avg.    | 0.49      | 0.54     | 0.49      | 
+| Weighted  avg.| 0.56      | 0.50     | 0.51      | 
+
+</td><td>
+             
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.34      | 0.60     | 0.43      |
+| Adequate      | 0.69      | 0.38     | 0.49      |  
+| Effective     | 0.45      | 0.67     | 0.54      | 
+| Macro avg.    | 0.49      | 0.55     | 0.49      | 
+| Weighted  avg.| 0.57      | 0.49     | 0.49      | 
+   
+</td></tr> </table>
+<table>
+<tr><th> c. PCA + BERT Unbalanced dataset GMM </th><th> d. PCA + BERT Unbalanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.53      | 0.11     | 0.18      | 
+| Adequate      | 0.62      | 0.87     | 0.72      | 
+| Effective     | 0.57      | 0.35     | 0.43      | 
+| Macro avg.    | 0.57      | 0.44     | 0.45      | 
+| Weighted  avg.| 0.59      | 0.61     | 0.56      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.53      | 0.08     | 0.14      | 
+| Adequate      | 0.62      | 0.88     | 0.73      | 
+| Effective     | 0.59      | 0.36     | 0.45      | 
+| Macro avg.    | 0.58      | 0.44     | 0.44      | 
+| Weighted  avg.| 0.60      | 0.61     | 0.56      | 
+        
+</td></tr> </table>
+**Table 5 a-d: Summary of metrics for PCA + BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 25 features**
 
 From these experiments, we see that BERT encoding perform better than Tf-Idf encodings in all metrics: F1 score, precision, recall and accuracy. The best BERT encoding based model obtains 25 PCA features from 768-dimensional BERT encodings and then cluster the PCA features into 100 clusters through KMeans. This gives 49% accuracy on the validation data.
 
