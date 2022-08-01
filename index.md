@@ -542,8 +542,6 @@ The accuray and performance metrics of the top 4 unsupervised models are listed 
 
 To conclude, among the unsupervised learning models considered, the balanced learning model with 25 features and 100 K-means clusters using BERT+PCA (Table **5 a**) is seen to provide the best mix of accuracy and generalization across classes. 
 
-
-
 <!---
 We used t-SNE to reduce the dimensions to 3 components (i.e. 3d Projection of data). The imbalanced dataset could not get a stable response and the performance was poor for a number of clusters 3,5,15 and 25. It can be inferred from tables 6-a and 6-b, that there is a noticeable difference between the performances of the unbalanced dataset and balanced dataset for the same number of clusters in Kmeans. The performances of effective and ineffective labeling increases as the number of clusters increase in the balanced dataset. The balanced data has significant performance improvement from 10 to 25 clusters as seen in tables 6-c and 6-d, but the performance does not increase after and stagnates at the same level as the number of clusters keep increasing.
 
@@ -628,13 +626,21 @@ To conclude, among the unsupervised learning models considered, the balanced lea
 
 ### Conclusion and Future Work
 
-**Just summarize the last 2 slides here**
+As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We gained insghts into the accuracies of supervised and unspervised learning methods.
 
-As the education sector continues to dive deeper into automated evaluation systems, opportunities exists for the incorporation of automated essay feedback tools. In this report, we explored the applications of machine learning techniques in giving automated feedback to arguments in students essays, by classifying them as effective, adequate and ineffective. We were able to gain insghts into the accuracies of supervised and unspervised learning methods.
-    
-This work while currently being explored for essay writings in teh education sector, can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
+* **Model Summary**
 
-   
+
+As expected supervised learning models provided higher accuracy than unsupervised methods. Within supervised methods, owing to abbility to better represent semantic information, DeBERTa based models performed better. The single tas model training on imbalanced data has the highest F1 score and accuracy. However, this model performs poorly at predicting the minority class "*ineffective*". Training the same DeBERTa model on balanced dataset through multi-task learning results in a robust performance across all classes. However, this comes at the expense of a drop in overall accuracy and F1 score.
+
+Amongst the unsupervised models, reducing the BERT encodings through PCA (into 25 features) and obtaining clusters via KMeans (100 clusters) provided the best accuracy and F1 score across all classes. Interestly, the unsupervised model is more robust across the classes albeit with a poorer performance.
+
+* **Future Research**
+
+<!---
+AES is widely being explored for essay writings in the education sector, and it can also be potentially explored in areas where where writing plays a major part such as in publishing, journalism, Law e.t.c 
+--->
+
     
 ### Gantt Chart 
 
