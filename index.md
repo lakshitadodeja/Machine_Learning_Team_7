@@ -521,7 +521,7 @@ From these experiements we see that balanced learning performs better than model
 
 An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables 6 and 7). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
 
-The accuray and performance metrics of the top 4 unsupervised models are listed below in Table **list number *** here** for summary. 
+The accuray and performance metrics of the top 4 unsupervised models are listed below in Table **8** for summary. 
 
 **Include the top 4 models with red box in the slides and show their accuray**
 
