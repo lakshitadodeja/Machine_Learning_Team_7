@@ -372,6 +372,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 | Effective     | 0.51      | 0.23     | 0.32      | 
 | Macro avg.    | 0.53      | 0.41     | 0.41      | 
 | Weighted  avg.| 0.56      | 0.59     | 0.53      | 
+        
+</td></tr> </table>
 **Table : Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features**
 
 
