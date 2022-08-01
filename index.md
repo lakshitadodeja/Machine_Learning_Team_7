@@ -237,6 +237,55 @@ In order to obtain usable feature vectors as input to unsupervised clustering me
 
 **Pls include the PCA+ Tf-Idf tables for GMM and Kmeans here**
 
+<table>
+<tr><th> a. PCA + Tf-Idf Balanced dataset GMM </th><th> b. PCA + Tf-Idf Balanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.29      | 0.55     | 0.38      |
+| Adequate      | 0.68      | 0.34     | 0.46      |  
+| Effective     | 0.39      | 0.59     | 0.47      | 
+| Macro avg.    | 0.45      | 0.50     | 0.44      | 
+| Weighted  avg.| 0.54      | 0.44     | 0.45      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.30      | 0.55     | 0.39      |
+| Adequate      | 0.67      | 0.40     | 0.50      | 
+| Effective     | 0.39      | 0.52     | 0.45      | 
+| Macro avg.    | 0.45      | 0.49     | 0.45      | 
+| Weighted  avg.| 0.54      | 0.46     | 0.47      | 
+    
+</td></tr> </table>
+<table>
+<tr><th> c. PCA + Tf-Idf Unbalanced dataset GMM </th><th> d. PCA + Tf-Idf Unbalanced dataset Kmeans  </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.36      | 0.02     | 0.04      | 
+| Adequate      | 0.60      | 0.89     | 0.72      | 
+| Effective     | 0.49      | 0.27     | 0.35      | 
+| Macro avg.    | 0.48      | 0.39     | 0.37      | 
+| Weighted  avg.| 0.53      | 0.58     | 0.51      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.50      | 0.02     | 0.03      | 
+| Adequate      | 0.60      | 0.92     | 0.72      | 
+| Effective     | 0.52      | 0.23     | 0.32      | 
+| Macro avg.    | 0.54      | 0.39     | 0.36      | 
+| Weighted  avg.| 0.56      | 0.59     | 0.50      | 
+        
+</td></tr> </table>
+**Table 4 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
+
+
 From these experiments, we see that 100 KMeans clusters on 75 PCA features achieves the best performance of 44% accuracy on the validation dataset. As mentioned in the Data Collection section, we observed the dataset to be biased towards one label value (Adequate), which caused the model to assign most clusters to this value. To counter this bias, we oversample the non-majority data using *RandomOverSampling* of *imblearn* module and create multiple samples the under-represented labels. This reduces the bias towards the majority label (Adequate).
 
 <!---
