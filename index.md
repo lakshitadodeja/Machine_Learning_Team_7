@@ -251,6 +251,7 @@ Similar experiement was repeated using BERT encodings in place of Tf-Idf vectors
 
 **Pls include the PCA + BERT tables for GMM and Kmeans here**
 
+From these experiments, we see that BERT encoding perform better than Tf-Idf encodings in all metrics: F1 score, precision, recall and accuracy. The best BERT encoding based model obtains 25 PCA features from 768-dimensional BERT encodings and then cluster the PCA features into 100 clusters through KMeans. This gives 49% accuracy on the validation data.
 
 <!---
 
