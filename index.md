@@ -281,6 +281,7 @@ In order to obtain usable feature vectors as input to unsupervised clustering me
 | Weighted  avg.| 0.56      | 0.59     | 0.50      | 
         
 </td></tr> </table>
+
 **Table 4 a-d: Summary of metrics for PCA + Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 75 features**
 
 
@@ -342,6 +343,7 @@ Similar experiement was repeated using BERT encodings in place of Tf-Idf vectors
 | Weighted  avg.| 0.60      | 0.61     | 0.56      | 
         
 </td></tr> </table>
+
 **Table 5 a-d: Summary of metrics for PCA + BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 25 features**
 
 From these experiments, we see that BERT encoding perform better than Tf-Idf encodings in all metrics: F1 score, precision, recall and accuracy. The best BERT encoding based model obtains 25 PCA features from 768-dimensional BERT encodings and then cluster the PCA features into 100 clusters through KMeans. This gives 49% accuracy on the validation data.
@@ -458,6 +460,7 @@ The performance metrics on the validation data are given below:
 | Weighted  avg.| 0.56      | 0.59     | 0.53      | 
         
 </td></tr> </table>
+
 **Table 6 a-d: Summary of metrics for t-SNE+ Tf-Idf balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 3 features.**
 
 
@@ -514,6 +517,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 
 </td><td>
 </table>
+    
 **Table 7 a-d: Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
 
 
