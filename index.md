@@ -492,7 +492,7 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
     
 </td></tr> </table>
 <table>
-<th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th>
+<tr><th> c. t-SNE + Tf-Idf Unbalanced dataset GMM </th><th> d. t-SNE + Tf-Idf Unbalanced dataset Kmeans  </th></tr>
               
 |Labels         | Precision | Recall   | F1-score  | 
 | ------------- | :-------: | :-------:| :-------: | 
@@ -512,6 +512,8 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 | Macro avg.    | 0.58      | 0.45     | 0.45      | 
 | Weighted  avg.| 0.60      | 0.62     | 0.56      | 
         
+
+</td><td>
  </table>
 **Table 7 a-d: Summary of metrics for t-SNE+ BERT balanced and unbalanced datasets with GMM and Kmeans clustering for 100 Clusters and 2 features**
 
@@ -524,7 +526,7 @@ The accuray and performance metrics of the top 4 unsupervised models are listed 
 
 **Include the top 4 models with red box in the slides and show their accuray**
 <table>
-<tr><th>  accuray and performance metrics of the top 4 unsupervised models  </th></tr>
+<th>   accuray and performance metrics of the top 4 unsupervised models   </th>
 <tr><td>
               
 |Labels         | Accuracy |
@@ -534,7 +536,6 @@ The accuray and performance metrics of the top 4 unsupervised models are listed 
 | Tf-Idf+t-SNE  | 0.46     | 
 | BERT+t-SNE    | 0.48     |
 
-</td><td>
  </table>
 To conclude, among the unsupervised learning models considered, the balanced learning model with *blah.. blah..blaaahh*. (Table **????**) is seen to provide the best mix of accuracy and generalization across classes. 
 
