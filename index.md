@@ -328,6 +328,31 @@ Similar to the PCA based analysis on BERT encodings, only the CLS token's encodi
 
 **Pls include the t-SNE + Tf-Idf tables for GMM and Kmeans here**
 
+<table>
+<tr><th> g. MTL Imbalanced dataset (DeBERTa) </th><th> h. MTL Balanced dataset (DeBERTa) </th></tr>
+<tr><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.56      | 0.15     | 0.23      | 
+| Adequate      | 0.68      | 0.82     | 0.75      | 
+| Effective     | 0.66      | 0.68     | 0.67      | 
+| Macro avg.    | 0.63      | 0.55     | 0.55      | 
+| Weighted  avg.| 0.66      | 0.67     | 0.64      | 
+
+</td><td>
+              
+|Labels         | Precision | Recall   | F1-score  | 
+| ------------- | :-------: | :-------:| :-------: | 
+| Ineffective   | 0.43      | 0.36     | 0.39      | 
+| Adequate      | 0.70      | 0.70     | 0.70      | 
+| Effective     | 0.62      | 0.68     | 0.65      | 
+| Macro avg.    | 0.58      | 0.58     | 0.58      | 
+| Weighted  avg.| 0.63      | 0.64     | 0.63      | 
+    
+</td></tr> </table>
+
+
 From these experiements we see that balanced learning performs better than models trained on imbalanced data sets. Also, models based on BERT encodings outperform Tf-Idf encodings based models. This is to be expected because the BERt encodings retain the semantic information of the documents. Whereas, Tf-Idf tokens are independentl of each other thus lack any semantic and sequential information. 
 
 An interesting observation is that for PCA-based models both clustering performance of KMeans and GMM is very similar (see Tables **Include correct numbers **** here** ). However, on t-SNE features GMM is seen to have better clustering performance than KMeans (see Tables **Include correct numbers **** here** ). This can be explained from the orthogonal nature of the PCA modes. As the PCA modes are uncorrelated, the Euclidian distance metric used in KMeans accurately captures the clonesness between the data points. In contrast, the t-SNE modes are typically correlated to each other. Due to this, the full matrix covariance of GMM captures the proximity between the data points better. Thus, we see that GMM performs better than KMeans on t-SNE based models while their performance is similar on PCA-based models.
