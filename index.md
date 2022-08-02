@@ -630,12 +630,12 @@ As the education sector continues to dive deeper into automated evaluation syste
 
 * **Model Summary**
 
-
 As expected supervised learning models provided higher accuracy than unsupervised methods. Within supervised methods, owing to abbility to better represent semantic information, DeBERTa based models performed better. The single tas model training on imbalanced data has the highest F1 score and accuracy. However, this model performs poorly at predicting the minority class "*ineffective*". Training the same DeBERTa model on balanced dataset through multi-task learning results in a robust performance across all classes. However, this comes at the expense of a drop in overall accuracy and F1 score.
 
 Amongst the unsupervised models, reducing the BERT encodings through PCA (into 25 features) and obtaining clusters via KMeans (100 clusters) provided the best accuracy and F1 score across all classes. Interestly, the unsupervised model is more robust across the classes albeit with a poorer performance.
 
 * **Future Research**
+
 In a future study, one could explore improving the multi-task DeBERTa based model. Currently, the *BalancedSampler* only balances the *discourse_effectiveness* class. Extending the balanced sampling to *discourse_type* could improve the robustness of the model. Additionally, in the current multi-task learning architecture, only the last *soft-max* layer weights are varied for their specific tasks - rest of the weight are training jointly. Adding a few more independent layers for each of the task heads (particularly for *discourse_effectiveness* prediction), could improve both the accuracy and robustness of the supervised model.
 
 For unsupervised models, we reduced the BERT encoding directly into a low dimensional space and then cluster the data. However, kernel methods such as kernel-PCA and spectral clustering cast the 768-dimensional dense representation of BERT encodings into a sparse infinite dimensional space and then perform dimensionality reduction. This could help indentify the basis that better clusters the data.
